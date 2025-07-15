@@ -8,10 +8,16 @@ function Homepage() {
 	const setHomeBanner = {
 		src: "/Home Image.jpg",
 		heading: "Delivering Talent and Technology — When and Where You Need It.",
+		subheading:
+			"End-to-end staffing and product solutions for government and commercial clients.",
 	};
 	return (
 		<div>
-			<Banner src={setHomeBanner.src} heading={setHomeBanner.heading} />
+			<Banner
+				src={setHomeBanner.src}
+				heading={setHomeBanner.heading}
+				subheading={setHomeBanner.subheading}
+			/>
 			<CoreOfferings />
 			<WhyChooseUs />
 			<GetInTouch />

@@ -6,16 +6,17 @@ import NavBar from "../../navBar/NavBar";
 
 import { usePathname } from "next/navigation";
 
-function Banner({ src, heading }) {
+function Banner({ src, heading, subheading }) {
 	const path = usePathname();
 	console.log("Path name is: ", path);
 
 	const isHome = path === "/";
+	const isIndustryServe = path === "/industrial-serve";
 	return (
 		<>
 			<div
 				className={`w-full  relative overflow-hidden ${
-					isHome ? "h-screen" : "min-h-[50vh]"
+					isHome ? "h-screen" : "min-h-[60vh]"
 				}`}>
 				{/* NavBar at the top, absolutely positioned */}
 				<div className="absolute top-0 left-0 w-full z-20">
@@ -39,7 +40,7 @@ function Banner({ src, heading }) {
 					/>
 				)}
 
-				<div className="absolute inset-0 bg-black/0" />
+				<div className="absolute inset-0 bg-black/20" />
 
 				<div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">
 					<div className="w-full max-w-7xl text-center text-white">
@@ -47,10 +48,9 @@ function Banner({ src, heading }) {
 							{/* Delivering Talent and Technology — When and Where You Need It. */}
 							{heading}
 						</h1>
-						{isHome ? (
+						{isHome || isIndustryServe ? (
 							<p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mb-6 sm:mb-8 lg:mb-10 max-w-5xl mx-auto">
-								End-to-end staffing and product solutions for government and
-								commercial clients.
+								{subheading}
 							</p>
 						) : null}
 						{isHome ? (
