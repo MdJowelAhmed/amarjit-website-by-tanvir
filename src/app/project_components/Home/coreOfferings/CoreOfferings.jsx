@@ -7,8 +7,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-
-import provideIcon from "@/app/IconProvider/IconProvider";
+import provideIcon from "@/IconProvider/IconProvider";
 
 const CoreOfferings = () => {
 	const staffingSolutions = [

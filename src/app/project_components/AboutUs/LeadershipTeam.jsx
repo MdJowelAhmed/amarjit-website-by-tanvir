@@ -8,6 +8,7 @@ function LeadershipTeam() {
 			name: "Jane Doe",
 			title: "Chief Executive Officer",
 			src: "/About Us/leader_1.png",
+			alt: "leader_1",
 			description:
 				" A visionary leader and certified 8(a)/WOSB business owner, Jane has over 20 years of experience in federal contracting and workforce solutions. She leads strategic growth",
 		},
@@ -15,6 +16,7 @@ function LeadershipTeam() {
 			name: "John Smith",
 			title: "Chief Operating Officer",
 			src: "/About Us/leader_2.png",
+			alt: "leader_2",
 			description:
 				" John manages daily operations, delivery timelines, and large-scale client programs across multiple industries. His background in IT services, logistics, and contract fulfillment ensures smooth execution from intake to implementation.",
 		},
@@ -22,6 +24,7 @@ function LeadershipTeam() {
 			name: "Maria Chen",
 			title: "Chief Technology Officer",
 			src: "/About Us/leader_3.png",
+			alt: "leader_3",
 			description:
 				" John manages daily operations, delivery timelines, and large-scale client programs across multiple industries. His background in IT services, logistics, and contract fulfillment ensures smooth execution from intake to implementation.",
 		},
@@ -29,6 +32,7 @@ function LeadershipTeam() {
 			name: "Steve Mark",
 			title: "Chief Financial Officer",
 			src: "/About Us/leader_4.png",
+			alt: "leader_4",
 			description:
 				" John manages daily operations, delivery timelines, and large-scale client programs across multiple industries. His background in IT services, logistics, and contract fulfillment ensures smooth execution from intake to implementation.",
 		},
@@ -51,6 +55,7 @@ function LeadershipTeam() {
 									src={member.src}
 									width={400}
 									height={400}
+									alt={member.alt}
 									className="w-full group-hover:scale-105 ease-in duration-300 "
 								/>
 							</CardHeader>

@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import provideIcon from "@/app/IconProvider/IconProvider";
+import provideIcon from "@/IconProvider/IconProvider";
 
 export function Footer() {
 	return (

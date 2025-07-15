@@ -1,5 +1,5 @@
 import React from "react";
-import AboutUsLayout from "../components/AboutUs/AboutUsLayout";
+import AboutUsLayout from "../project_components/AboutUs/AboutUsLayout";
 
 function AboutUs() {
 	return (

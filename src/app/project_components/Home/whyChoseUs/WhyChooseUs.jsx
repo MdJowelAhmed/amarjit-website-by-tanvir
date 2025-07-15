@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Award, Globe, Truck } from "lucide-react";
-import provideIcon from "@/app/IconProvider/IconProvider";
+import provideIcon from "@/IconProvider/IconProvider";
 
 function WhyChooseUs() {
 	const features = [
