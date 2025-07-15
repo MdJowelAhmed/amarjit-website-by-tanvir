@@ -43,7 +43,7 @@ function Banner({ src, heading }) {
 
 				<div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">
 					<div className="w-full max-w-7xl text-center text-white">
-						<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight mb-4 sm:mb-6">
+						<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl xl:text-8xl 2xl:text-8xl font-semibold leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight mb-4 sm:mb-6">
 							{/* Delivering Talent and Technology — When and Where You Need It. */}
 							{heading}
 						</h1>
