@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use } from "react";
 import Image from "next/image";
 import {
 	Card,
@@ -8,6 +8,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import provideIcon from "@/IconProvider/IconProvider";
+import HeadingSection from "@/utils/provideHeadingSubheading";
 
 const CoreOfferings = () => {
 	const staffingSolutions = [
@@ -57,6 +58,30 @@ const CoreOfferings = () => {
 		},
 	];
 
+	function StaffingSection() {
+		return (
+			<section>
+				<HeadingSection
+					heading="Staffing Solutions"
+					subheading="Providing tailored staffing solutions to meet your business needs. Our services connect you with skilled professionals, ensuring the right talent is in place to drive success and growth."
+				/>
+			</section>
+		);
+	}
+	function productProvision() {
+		return (
+			<section>
+				<HeadingSection
+					heading="Product Provisioning "
+					subheading="Streamline your business with efficient product provisioning. We
+								ensure smooth and timely delivery, manage inventory, and
+								optimize supply chains, helping you provide products seamlessly
+								to meet customer demands and enhance operational efficiency."
+				/>
+			</section>
+		);
+	}
+
 	return (
 		<>
 			<section className="bg-white  py-16 sm:py-20 lg:pt-24 lg:pb-0  overflow-hidden">
@@ -81,7 +106,7 @@ const CoreOfferings = () => {
 
 					{/* Staffing Solutions Section */}
 					<div className="mb-16 sm:mb-20">
-						<div className="text-center mb-12 sm:mb-16">
+						{/* <div className="text-center mb-12 sm:mb-16">
 							<h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-blue-900 mb-4 sm:mb-6">
 								Staffing Solutions
 							</h3>
@@ -91,7 +116,8 @@ const CoreOfferings = () => {
 								ensuring the right talent is in place to drive success and
 								growth.
 							</p>
-						</div>
+						</div> */}
+						{StaffingSection()}
 
 						{/* Staffing Cards Grid */}
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -130,7 +156,7 @@ const CoreOfferings = () => {
 
 					{/* Staffing Solutions Section */}
 					<div className="mb-16 sm:mb-20">
-						<div className="text-center mb-12 sm:mb-16">
+						{/* <div className="text-center mb-12 sm:mb-16">
 							<h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-blue-900 mb-4 sm:mb-6">
 								Product Provisioning 
 							</h3>
@@ -140,7 +166,8 @@ const CoreOfferings = () => {
 								optimize supply chains, helping you provide products seamlessly
 								to meet customer demands and enhance operational efficiency.
 							</p>
-						</div>
+						</div> */}
+						{productProvision()}
 
 						{/* Staffing Cards Grid */}
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
