@@ -13,6 +13,7 @@ function Banner({ src, heading, subheading }) {
 	const isHome = path === "/";
 	const isIndustryServe = path === "/industrial-serve";
 	const isCertification = path === "/certification";
+	const isBlog = path === "/blog";
 	return (
 		<>
 			<div
@@ -49,7 +50,7 @@ function Banner({ src, heading, subheading }) {
 							{/* Delivering Talent and Technology — When and Where You Need It. */}
 							{heading}
 						</h1>
-						{isHome || isIndustryServe || isCertification ? (
+						{isHome || isIndustryServe || isCertification || isBlog ? (
 							<p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mb-6 sm:mb-8 lg:mb-10 max-w-5xl mx-auto">
 								{subheading}
 							</p>

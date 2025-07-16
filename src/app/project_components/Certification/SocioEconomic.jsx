@@ -1,9 +1,23 @@
+"use client";
 import { Card } from "@/components/ui/card";
 import provideIcon from "@/IconProvider/IconProvider";
 import HeadingSection from "@/utils/provideHeadingSubheading";
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
+import {
+	Dialog,
+	DialogClose,
+	DialogContent,
+	DialogDescription,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from "@/components/ui/dialog";
 
 function SocioEconomic() {
+	const [selectedCertificate, setSelectedCertificate] = useState(null);
+
 	function socioEconomicHeading() {
 		return (
 			<section>
@@ -19,35 +33,63 @@ function SocioEconomic() {
 		{
 			id: 1,
 			icon: provideIcon({ name: "certificate" }),
+			src: "/Certificate/cartificate.png",
 			headline: "MBE",
 			subheadLine: "Minority Business Enterprise",
 		},
 		{
 			id: 2,
 			icon: provideIcon({ name: "certificate" }),
+			src: "/Certificate/cartificate.png",
 			headline: "WOSB",
 			subheadLine: "Women-Owned Small Business",
 		},
 		{
 			id: 3,
 			icon: provideIcon({ name: "certificate" }),
+			src: "/Certificate/cartificate.png",
 			headline: "8(a) Certification ",
 			subheadLine: " SBA Certified",
 		},
 		{
 			id: 4,
 			icon: provideIcon({ name: "certificate" }),
+			src: "/Certificate/cartificate.png",
 			headline: "HUB Zone",
 			subheadLine: "Historically Underutilized Business",
 		},
 	];
+
 	return (
 		<div className="pb-24">
 			{socioEconomicHeading()}
 			<div className="container mx-auto grid lg:grid-cols-4 gap-10">
 				{socioEconomic.map((item) => (
 					<Card key={item.id} className="flex items-center gap-1 ">
-						{provideIcon({ name: "certificate" })}
+						<Dialog>
+							<DialogTrigger asChild>
+								<button
+									className="cursor-pointer hover:opacity-80 transition-opacity"
+									onClick={() => setSelectedCertificate(item)}>
+									{provideIcon({ name: "certificate" })}
+								</button>
+							</DialogTrigger>
+							<DialogContent className=" max-w-4xl lg:min-w-4xl">
+								<DialogHeader>
+									<DialogTitle>{item.headline}</DialogTitle>
+									<DialogDescription>{item.subheadLine}</DialogDescription>
+								</DialogHeader>
+								<div className="flex justify-center">
+									<Image
+										src={item.src}
+										alt={`${item.headline} Certificate`}
+										width={800}
+										height={600}
+										className="max-w-full h-auto border rounded-lg shadow-lg"
+									/>
+								</div>
+							</DialogContent>
+						</Dialog>
 						<div className="flex flex-col items-center gap-2">
 							<h1 className="text-3xl font-bold">{item.headline}</h1>
 							<p className="text-lg font-medium">{item.subheadLine}</p>
