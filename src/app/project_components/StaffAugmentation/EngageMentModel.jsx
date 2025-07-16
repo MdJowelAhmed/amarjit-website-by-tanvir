@@ -26,6 +26,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 
 import HeadingSection from "@/utils/provideHeadingSubheading";
+import Image from "next/image";
 
 import Link from "next/link";
 import React, { useState } from "react";
@@ -219,42 +220,109 @@ function EngageMentModel() {
 
 	// Contract-to-Hire Dialog
 	const ContractToHireDialog = () => (
-		<DialogContent className="max-w-lg">
-			<DialogHeader>
-				<DialogTitle className="flex items-center gap-2">
-					<LuBriefcase className="w-5 h-5" />
-					Contract-to-Hire Services
-				</DialogTitle>
-			</DialogHeader>
-			<div className="space-y-4">
-				<div className="bg-blue-50 p-4 rounded-lg">
-					<h3 className="font-semibold text-blue-900 mb-2">How it works:</h3>
-					<ul className="text-sm text-blue-800 space-y-1">
-						<li>• Candidate works on contract initially</li>
-						<li>• Evaluate performance and cultural fit</li>
-						<li>• Convert to permanent role when ready</li>
-						<li>• Reduce hiring risks and costs</li>
-					</ul>
-				</div>
-				<div className="space-y-2">
-					<Label htmlFor="position">Position Title</Label>
-					<Input id="position" placeholder="e.g., Software Developer" />
-				</div>
-				<div className="space-y-2">
-					<Label htmlFor="duration">Expected Contract Duration</Label>
-					<Input id="duration" placeholder="e.g., 3-6 months" />
-				</div>
-				<div className="space-y-2">
-					<Label htmlFor="requirements">Key Requirements</Label>
-					<Textarea
-						id="requirements"
-						placeholder="List key skills and requirements..."
-						rows={3}
+		// <DialogContent className="max-w-lg  md:max-w-2xl lg:max-w-4xl border-2 border-red-300">
+		// 	<div className="mt-2 text-center">
+		// 		<h1 className="text-xl md:text-2xl lg:text-3xl  font-semibold md:font-bold">
+		// 			Contract-to-Hire
+		// 		</h1>
+		// 		<p className="text-gray-600 mt-2">
+		// 			Evaluate a candidate’s fit on the job before making a full-time
+		// 			commitment a low-risk path to long-term success.
+		// 		</p>
+		// 		<Button className="h-12 mt-4 ">Talk to Our HR Team</Button>
+		// 	</div>
+		// 	<div className="flex flex-col sm:flex sm:flex-row gap-10 items-start justify-between mt-6 px-6 w-full">
+		// 		<div className="w-1/2 ">
+		// 			<Image
+		// 				src={"/Our Service/group.png"}
+		// 				alt={""}
+		// 				width={400}
+		// 				height={400}
+		// 				className=""
+		// 			/>
+		// 		</div>
+		// 		<div className="w-1/2 ">
+		// 			<h1 className="text-2xl font-bold">How It Works</h1>
+		// 			<ul className="space-y-4 mt-2">
+		// 				<li>
+		// 					<Label className="text-xl">Deploy Pre-Vetted Talent</Label>
+		// 					<p className="text-gray-600 mt-1">
+		// 						We match you with qualified candidates who meet your technical
+		// 						and cultural needs.
+		// 					</p>
+		// 				</li>
+		// 				<li>
+		// 					<Label className="text-xl">Evaluate on the Job</Label>
+		// 					<p className="text-gray-600 mt-1">
+		// 						Assess performance and fit over a trial period with minimal
+		// 						commitment
+		// 					</p>
+		// 				</li>
+		// 				<li>
+		// 					<Label className="text-xl">Hire with Confidence</Label>
+		// 					<p className="text-gray-600 mt-1">
+		// 						Transition top performers to full-time with no disruption to
+		// 						your workflow.
+		// 					</p>
+		// 				</li>
+		// 			</ul>
+		// 		</div>
+		// 	</div>
+		// </DialogContent>
+
+		<DialogContent className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl border-2 border-red-300 p-4 sm:p-6 lg:p-8">
+			<div className="text-center">
+				<h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
+					Contract-to-Hire
+				</h1>
+				<p className="text-gray-600 mt-2">
+					Evaluate a candidate’s fit on the job before making a full-time
+					commitment — a low-risk path to long-term success.
+				</p>
+				<Button className="h-12 mt-4">Talk to Our HR Team</Button>
+			</div>
+
+			<div className="flex flex-col lg:flex-row gap-8 items-center justify-between mt-6 w-full">
+				{/* Image Section */}
+				<div className="w-3/5 sm:w-1/2 lg:w-1/2">
+					<Image
+						src="/Our Service/group.png"
+						alt="Contract-to-Hire illustration"
+						width={400}
+						height={400}
+						className="w-full h-auto object-contain"
 					/>
 				</div>
-				<Button type="submit" className="w-full">
-					Get Started
-				</Button>
+
+				{/* Text Section */}
+				<div className="w-full lg:w-1/2">
+					<h2 className="text-2xl font-bold mb-4 text-center lg:text-left">
+						How It Works
+					</h2>
+					<ul className="space-y-6">
+						<li>
+							<Label className="text-xl">Deploy Pre-Vetted Talent</Label>
+							<p className="text-gray-600 mt-1">
+								We match you with qualified candidates who meet your technical
+								and cultural needs.
+							</p>
+						</li>
+						<li>
+							<Label className="text-xl">Evaluate on the Job</Label>
+							<p className="text-gray-600 mt-1">
+								Assess performance and fit over a trial period with minimal
+								commitment.
+							</p>
+						</li>
+						<li>
+							<Label className="text-xl">Hire with Confidence</Label>
+							<p className="text-gray-600 mt-1">
+								Transition top performers to full-time with no disruption to
+								your workflow.
+							</p>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</DialogContent>
 	);
