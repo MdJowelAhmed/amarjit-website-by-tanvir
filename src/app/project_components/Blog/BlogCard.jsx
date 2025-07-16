@@ -17,7 +17,7 @@ function BlogCard({ cardInfo }) {
 			{cardInfo.map((card, index) => (
 				<Card
 					key={card.id || index}
-					className="w-full max-w-md flex flex-col my-8">
+					className="w-full max-w-md flex flex-col my-8 rounded-md">
 					<CardHeader>
 						<div className="relative w-full h-full overflow-hidden rounded-lg">
 							<Image
