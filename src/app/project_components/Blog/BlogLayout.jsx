@@ -14,7 +14,7 @@ import { cardInfo } from "./blogData";
 
 function BlogLayout() {
 	const setBlogBanner = {
-		src: "/About US/About_Us.jpg",
+		src: "/Blog/Blog.jpg",
 		heading: "Stay Ahead with Actionable Insights",
 		subheading:
 			"From federal staffing trends to smarter procurement strategies, our team shares expert perspectives to help decision-makers drive results.",

@@ -16,7 +16,7 @@ function BlogDynamicPage() {
 	console.log(card);
 
 	const setBlogBanner = {
-		src: "/About US/About_Us.jpg",
+		src: "/Blog/Blog.jpg",
 		heading: "Stay Ahead with Actionable Insights",
 		subheading:
 			"From federal staffing trends to smarter procurement strategies, our team shares expert perspectives to help decision-makers drive results.",
@@ -51,17 +51,6 @@ function BlogDynamicPage() {
 			/>
 
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
-				{/* Back Button
-				<div className="mb-6 sm:mb-8">
-					<Button
-						onClick={handleBack}
-						variant="outline"
-						className="flex items-center gap-2 hover:bg-gray-100 transition-colors">
-						<ArrowLeft className="w-4 h-4" />
-						Back
-					</Button>
-				</div> */}
-
 				{/* Main Content Container */}
 				<div className="max-w-4xl mx-auto">
 					{/* Author Info Section */}
@@ -87,7 +76,7 @@ function BlogDynamicPage() {
 						<Button
 							onClick={handleBack}
 							variant="outline"
-							className="flex items-center justify-center gap-2 w-full sm:w-auto">
+							className="flex items-center justify-center gap-2 sm:w-auto">
 							<ArrowLeft className="w-4 h-4" />
 							Back to Blog
 						</Button>

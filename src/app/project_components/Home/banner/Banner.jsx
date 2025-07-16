@@ -15,6 +15,7 @@ function Banner({ src, heading, subheading }) {
 	const isCertification = path === "/certification";
 	const isBlog = path === "/blog";
 	const isDynamicBlog = path.includes("/blog/");
+	const isStaffAugment = path === "/staff-augmentation-services";
 	return (
 		<>
 			<div
@@ -43,7 +44,7 @@ function Banner({ src, heading, subheading }) {
 					/>
 				)}
 
-				<div className="absolute inset-0 bg-black/20" />
+				<div className="absolute inset-0 bg-black/10" />
 
 				<div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">
 					<div className="w-full max-w-7xl text-center text-white">
@@ -55,7 +56,8 @@ function Banner({ src, heading, subheading }) {
 						isIndustryServe ||
 						isCertification ||
 						isBlog ||
-						isDynamicBlog ? (
+						isDynamicBlog ||
+						isStaffAugment ? (
 							<p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mb-6 sm:mb-8 lg:mb-10 max-w-5xl mx-auto">
 								{subheading}
 							</p>
