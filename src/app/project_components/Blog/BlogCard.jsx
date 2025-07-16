@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { LuMoveRight } from "react-icons/lu";
+import Link from "next/link";
 
 function BlogCard({ cardInfo }) {
 	return (
@@ -54,12 +55,13 @@ function BlogCard({ cardInfo }) {
 								<p className="text-xs text-gray-500">{card.date}</p>
 							</div>
 						</div>
-
-						<Button
-							type="button"
-							className="bg-transparent border rounded shadow-none h-10 text-black hover:bg-transparent hover:border-black flex items-center justify-center gap-2">
-							Read More <LuMoveRight className="w-4 h-4" />
-						</Button>
+						<Link href={"/blog/5"}>
+							<Button
+								type="button"
+								className="bg-transparent border rounded shadow-none h-10 text-black hover:bg-transparent hover:border-black flex items-center justify-center gap-2">
+								Read More <LuMoveRight className="w-4 h-4" />
+							</Button>
+						</Link>
 					</CardFooter>
 				</Card>
 			))}

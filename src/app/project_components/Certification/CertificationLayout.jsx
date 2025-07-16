@@ -5,7 +5,7 @@ import SocioEconomic from "./SocioEconomic";
 
 function CertificationLayout() {
 	const setCertifcationBanner = {
-		src: "/About US/About_Us.jpg",
+		src: "/Certificate/Certifications.jpg",
 		heading: "Contract Vehicles & Certifications",
 		subheading:
 			'"Demonstrating our compliance, capability, and eligibility to serve government and commercial clients."',
