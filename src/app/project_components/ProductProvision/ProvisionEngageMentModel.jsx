@@ -10,11 +10,13 @@ import {
 import HeadingSection from "@/utils/provideHeadingSubheading";
 import React, { useState } from "react";
 import { LuMoveRight } from "react-icons/lu";
-
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 // Import dialog components
 
 function ProvisionEngageMentModel() {
 	const [openDialog, setOpenDialog] = useState(null);
+	const path = usePathname();
 
 	function provisionEngagementHeading() {
 		return (
@@ -31,24 +33,28 @@ function ProvisionEngageMentModel() {
 		{
 			id: 1,
 			heading: "GSA Schedules",
+			link: `${path}/gca-schedule`,
 			content:
 				"Pre-negotiated pricing, terms, and categories through our GSA Schedule Contract(s) for federal procurement ease and speed.",
 		},
 		{
 			id: 2,
 			heading: "State & Local Purchasing Contracts",
+			link: `${path}/local-purchasing`,
 			content:
 				"Active vendor registrations and contract awards across multiple states and municipalities.",
 		},
 		{
 			id: 3,
 			heading: "Cooperative Purchasing Agreements",
+			link: `${path}/cooperative-purchasing`,
 			content:
 				"Participation in nationally recognized co-ops (e.g., OMNIA, TIPS, Source well) to streamline bulk or multi-agency purchases.",
 		},
 		{
 			id: 4,
 			heading: "Vendor-Agnostic Sourcing",
+			link: `${path}/vendor-sourcing`,
 			content:
 				"We are not tied to specific OEMs or brands  which allows us to: Optimize for best pricing, shortest lead times, and mission fit",
 		},
@@ -75,11 +81,13 @@ function ProvisionEngageMentModel() {
 						</CardContent>
 
 						<CardFooter className="flex-shrink-0 pt-1 pb-4 flex items-center justify-center">
-							<Button
-								type="button"
-								className="bg-transparent border rounded shadow-none h-10 text-black hover:bg-transparent hover:border-black flex items-center justify-center gap-2 transition-colors duration-200">
-								Continue <LuMoveRight className="w-4 h-4" />
-							</Button>
+							<Link href={service.link}>
+								<Button
+									type="button"
+									className="bg-transparent border rounded shadow-none h-10 text-black hover:bg-transparent hover:border-black flex items-center justify-center gap-2 transition-colors duration-200">
+									Continue <LuMoveRight className="w-4 h-4" />
+								</Button>
+							</Link>
 						</CardFooter>
 					</Card>
 				))}
