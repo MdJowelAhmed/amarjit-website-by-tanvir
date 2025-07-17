@@ -59,14 +59,14 @@ function EngageMentModel() {
 		},
 	];
 
-	const getDialogContent = (id) => {
+	const getDialogContent = (id, parentOpen) => {
 		switch (id) {
 			case 1:
 				return <ContactDialog />;
 			case 2:
 				return <ContractToHireDialog />;
 			case 3:
-				return <DirectHireDialog />;
+				return <DirectHireDialog parentOpen={parentOpen} />;
 			case 4:
 				return <ManagedServicesDialog />;
 			default:
@@ -107,7 +107,7 @@ function EngageMentModel() {
 										Read More <LuMoveRight className="w-4 h-4" />
 									</Button>
 								</DialogTrigger>
-								{getDialogContent(service.id)}
+								{getDialogContent(service.id, openDialog === service.id)}
 							</Dialog>
 						</CardFooter>
 					</Card>
