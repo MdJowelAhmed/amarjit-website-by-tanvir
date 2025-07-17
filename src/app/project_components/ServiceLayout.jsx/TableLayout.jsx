@@ -1,51 +1,31 @@
 import React from "react";
 import { Download } from "lucide-react";
 
+const defaultContracts = [
+	{
+		id: 1,
+		contractName: "Default Contract",
+		stateAgency: "Default Agency",
+		contractNumber: "N/A",
+		servicesCovered: "N/A",
+	},
+];
+
 function TableLayout({
-	title = "How We Support State & Local Agencies",
-	description = "We simplify procurement for state, county, and city governments through pre-approved purchasing channels and cooperative contract vehicles. Our solutions are tailored to local agency needs—from IT hardware to professional staffing and managed services.",
+	title = "Contract Information",
+	description = "View available contracts and their details.",
 	sectionTitle = "Contract Listings",
 	contracts = [],
 }) {
-	const defaultContracts = [
-		{
-			id: 1,
-			contractName: "IT Hardware & Services",
-			stateAgency: "State of Texas",
-			contractNumber: "DIR-TSO-XXXX",
-			servicesCovered: "Devices, Licensing, Support",
-		},
-		{
-			id: 2,
-			contractName: "IT Hardware & Services",
-			stateAgency: "State of Texas",
-			contractNumber: "DIR-TSO-XXXX",
-			servicesCovered: "Devices, Licensing, Support",
-		},
-		{
-			id: 3,
-			contractName: "IT Hardware & Services",
-			stateAgency: "State of Texas",
-			contractNumber: "DIR-TSO-XXXX",
-			servicesCovered: "Devices, Licensing, Support",
-		},
-		{
-			id: 4,
-			contractName: "IT Hardware & Services",
-			stateAgency: "State of Texas",
-			contractNumber: "DIR-TSO-XXXX",
-			servicesCovered: "Devices, Licensing, Support",
-		},
-		{
-			id: 5,
-			contractName: "IT Hardware & Services",
-			stateAgency: "State of Texas",
-			contractNumber: "DIR-TSO-XXXX",
-			servicesCovered: "Devices, Licensing, Support",
-		},
-	];
-
+	// Use passed contracts or fallback to default
 	const contractData = contracts.length > 0 ? contracts : defaultContracts;
+
+	const handleDownload = (contractId, contractName) => {
+		// Handle download logic here
+		console.log(`Downloading contract ${contractId}: ${contractName}`);
+		// You can implement actual download functionality here
+		// For example: window.open(`/api/download/contract/${contractId}`, '_blank');
+	};
 
 	return (
 		<div className="max-w-6xl mx-auto p-6 space-y-6">
@@ -87,7 +67,7 @@ function TableLayout({
 							{contractData.map((contract) => (
 								<tr
 									key={contract.id}
-									className="hover:bg-gray-50 transition-colors">
+									className="hover:bg-gray-50 transition-colors duration-150">
 									<td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
 										{contract.contractName}
 									</td>
@@ -102,11 +82,11 @@ function TableLayout({
 									</td>
 									<td className="px-6 py-4 whitespace-nowrap text-center">
 										<button
-											className="inline-flex items-center justify-center p-2 text-red-600 hover:text-red-700 hover:bg-red-50 rounded-md transition-colors"
-											onClick={() => {
-												// Handle download logic here
-												console.log(`Downloading contract ${contract.id}`);
-											}}>
+											className="inline-flex items-center justify-center p-2 text-red-600 hover:text-red-700 hover:bg-red-50 rounded-md transition-colors duration-150"
+											onClick={() =>
+												handleDownload(contract.id, contract.contractName)
+											}
+											title={`Download ${contract.contractName}`}>
 											<Download className="h-4 w-4" />
 										</button>
 									</td>
