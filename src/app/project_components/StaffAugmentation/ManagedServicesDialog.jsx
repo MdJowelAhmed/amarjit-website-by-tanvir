@@ -1,64 +1,121 @@
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
 	DialogContent,
 	DialogHeader,
 	DialogTitle,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { LuBriefcase } from "react-icons/lu";
+import Image from "next/image";
+import SharedForm from "./SharedForm/SharedForm";
 
-const ManagedServicesDialog = () => (
-	<DialogContent className="max-w-lg">
-		<DialogHeader>
-			<DialogTitle className="flex items-center gap-2">
-				<LuBriefcase className="w-5 h-5" />
-				Managed Services & Project Staffing
-			</DialogTitle>
-		</DialogHeader>
-		<div className="space-y-4">
-			<div className="bg-purple-50 p-4 rounded-lg">
-				<h3 className="font-semibold text-purple-900 mb-2">What we offer:</h3>
-				<ul className="text-sm text-purple-800 space-y-1">
-					<li>• End-to-end project management</li>
-					<li>• Dedicated project teams</li>
-					<li>• Scalable solutions</li>
-					<li>• Performance metrics & reporting</li>
-				</ul>
-			</div>
-			<div className="space-y-2">
-				<Label htmlFor="projectType">Project Type</Label>
-				<Input
-					id="projectType"
-					placeholder="e.g., Software Development, IT Infrastructure"
-				/>
-			</div>
-			<div className="space-y-2">
-				<Label htmlFor="teamSize">Team Size Needed</Label>
-				<Input id="teamSize" placeholder="e.g., 5-10 professionals" />
-			</div>
-			<div className="space-y-2">
-				<Label htmlFor="timeline">Project Timeline</Label>
-				<Input id="timeline" placeholder="e.g., 6 months" />
-			</div>
-			<div className="space-y-2">
-				<Label htmlFor="budget">Budget Range</Label>
-				<Input id="budget" placeholder="e.g., $100,000 - $500,000" />
-			</div>
-			<div className="space-y-2">
-				<Label htmlFor="projectDetails">Project Details</Label>
-				<Textarea
-					id="projectDetails"
-					placeholder="Describe your project requirements..."
-					rows={3}
-				/>
-			</div>
-			<Button type="submit" className="w-full">
-				Request Proposal
-			</Button>
-		</div>
-	</DialogContent>
-);
+const ManagedServicesDialog = ({ parentOpen }) => {
+	const [openForm, setOpenForm] = useState(false);
+	const [formTitle, setFormTitle] = useState("");
+
+	const handleClose = () => {
+		setOpenForm(false);
+		setFormTitle("");
+	};
+
+	React.useEffect(() => {
+		if (!parentOpen) {
+			setOpenForm(false);
+			setFormTitle("");
+		}
+	}, [parentOpen]);
+
+	const serviceFeatures = [
+		{
+			id: 1,
+			title: "Project-Based Staffing",
+			description: "Quickly ramp up for initiatives or deadlines.",
+		},
+		{
+			id: 2,
+			title: "Managed IT Services",
+			description: "Full-cycle service delivery with SLAs and oversight.",
+		},
+		{
+			id: 3,
+			title: "Team Augmentation",
+			description: "Expand your capabilities without full-time commitments",
+		},
+		{
+			id: 4,
+			title: "Dedicated Engagement Managers",
+			description: "Your single point of contact for service accountability",
+		},
+	];
+	return (
+		<>
+			<DialogContent className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl  p-4 sm:p-6 lg:p-8">
+				<div className="text-center">
+					<h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
+						Scalable Managed Services & Project-Based Staffing
+					</h1>
+					<p className="text-gray-600 mt-2">
+						Deploy the right people and resources for mission-critical projects,
+						without overburdening internal teams.
+					</p>
+					<div className="flex gap-5 items-center justify-center">
+						<Button
+							className="h-12 mt-4"
+							onClick={() => {
+								setFormTitle("Request a Consultation");
+								setOpenForm(true);
+							}}>
+							Request a Consultation
+						</Button>
+						<Button
+							className="h-12 mt-4"
+							onClick={() => {
+								setFormTitle("Talk to a Project Manager");
+								setOpenForm(true);
+							}}>
+							Talk to a Project Manager
+						</Button>
+					</div>
+				</div>
+
+				<div className="flex flex-col lg:flex-row gap-8 items-center justify-between mt-6 w-full">
+					{/* Image Section */}
+					<div className="w-3/5 sm:w-1/2 lg:w-1/2">
+						<Image
+							src="/Our Service/group_3.png"
+							alt="Contract-to-Hire illustration"
+							width={400}
+							height={400}
+							className="w-full h-auto object-contain"
+						/>
+					</div>
+
+					{/* Text Section */}
+					<div className="w-full lg:w-1/2">
+						<h2 className="text-2xl font-bold mb-4 text-center lg:text-left">
+							Flexible Support, On-Demand Talent
+						</h2>
+						<p>
+							From full-service managed teams to highly specialized consultants,
+							we tailor workforce solutions for agencies and enterprises
+							tackling complex IT, engineering, or compliance-heavy projects.
+						</p>
+
+						<ul className="space-y-5 mt-3">
+							{serviceFeatures.map((item) => (
+								<li key={item.id}>
+									<Label className="text-xl">{item.title}</Label>
+									<p className="text-gray-600 mt-1">{item.description}</p>
+								</li>
+							))}
+						</ul>
+					</div>
+				</div>
+			</DialogContent>
+
+			{openForm && <SharedForm formTitle={formTitle} onClose={handleClose} />}
+		</>
+	);
+};
 
 export default ManagedServicesDialog;

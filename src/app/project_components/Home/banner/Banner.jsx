@@ -16,6 +16,7 @@ function Banner({ src, heading, subheading }) {
 	const isBlog = path === "/blog";
 	const isDynamicBlog = path.includes("/blog/");
 	const isStaffAugment = path === "/staff-augmentation-services";
+	const isProvision = path === "/product-provisioning-services";
 	return (
 		<>
 			<div
@@ -57,6 +58,7 @@ function Banner({ src, heading, subheading }) {
 						isCertification ||
 						isBlog ||
 						isDynamicBlog ||
+						isProvision ||
 						isStaffAugment ? (
 							<p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mb-6 sm:mb-8 lg:mb-10 max-w-5xl mx-auto">
 								{subheading}

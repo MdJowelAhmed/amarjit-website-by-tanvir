@@ -20,7 +20,7 @@ import React from "react";
 function SharedForm({ formTitle }) {
 	return (
 		<>
-			<DialogContent className="max-w-lg md:max-w-2xl lg:max-w-4xl border-2 border-red-300">
+			<DialogContent className="max-w-lg md:max-w-2xl lg:max-w-4xl ">
 				<div className="mt-2 text-center">
 					<h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
 						{formTitle}

@@ -14,7 +14,7 @@ const ContractToHireDialog = () => {
 
 	return (
 		<>
-			<DialogContent className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl border-2 border-red-300 p-4 sm:p-6 lg:p-8">
+			<DialogContent className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl  p-4 sm:p-6 lg:p-8">
 				<div className="text-center">
 					<h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
 						Contract-to-Hire

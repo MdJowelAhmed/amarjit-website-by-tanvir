@@ -68,7 +68,7 @@ function EngageMentModel() {
 			case 3:
 				return <DirectHireDialog parentOpen={parentOpen} />;
 			case 4:
-				return <ManagedServicesDialog />;
+				return <ManagedServicesDialog parentOpen={parentOpen} />;
 			default:
 				return null;
 		}
