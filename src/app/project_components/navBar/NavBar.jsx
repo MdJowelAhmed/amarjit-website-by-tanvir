@@ -83,23 +83,23 @@ function NavBar() {
 			</div>
 
 			<NavigationMenu>
-				<NavigationMenuList className="flex gap-2">
+				<NavigationMenuList className="flex gap-2 ">
 					{navLinks.map((nav) => {
 						if (nav.children) {
 							return (
 								<NavigationMenuItem key={nav.id}>
-									<NavigationMenuTrigger className="bg-transparent text-white hover:text-white hover:bg-transparent data-[state=open]:bg-white/10 data-[state=open]:text-white">
+									<NavigationMenuTrigger className="bg-transparent  text-white text-xl    data-[state=open]:text-white data-[state=open]:underline">
 										{nav.label}
 									</NavigationMenuTrigger>
 									<NavigationMenuContent>
-										<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
+										<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[300px]">
 											{nav.children.map((child) => (
 												<li key={child.id}>
 													<NavigationMenuLink asChild>
 														<Link
 															href={child.link}
 															className={cn(
-																"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:underline",
+																"block select-none space-y-1  rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground hover:underline",
 																isActive(child.link) && "underline"
 															)}>
 															<div className="text-sm font-medium leading-none">
@@ -123,7 +123,7 @@ function NavBar() {
 										<Link
 											href={nav.link}
 											className={cn(
-												"group inline-flex h-10  w-max items-center justify-center rounded-md px-4 py-2  font-medium transition-colors hover:underline text-white hover:text-[#7181E8] hover:bg-transparent disabled:pointer-events-none disabled:opacity-50 ",
+												"group inline-flex h-10  w-max items-center justify-center rounded-md px-4 py-2 text-xl font-medium transition-colors hover:underline text-white hover:text-[#7181E8] hover:bg-transparent disabled:pointer-events-none disabled:opacity-50 ",
 												isActive(nav.link) && "underline"
 											)}>
 											{nav.label}

@@ -6,7 +6,7 @@ import WhyChooseUs from "../project_components/Home/whyChoseUs/WhyChooseUs";
 
 function Homepage() {
 	const setHomeBanner = {
-		src: "/Home Image.jpg",
+		src: "/Home/Home Image.jpg",
 		heading: "Delivering Talent and Technology — When and Where You Need It.",
 		subheading:
 			"End-to-end staffing and product solutions for government and commercial clients.",

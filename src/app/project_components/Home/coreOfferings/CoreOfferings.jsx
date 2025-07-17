@@ -9,12 +9,14 @@ import {
 } from "@/components/ui/card";
 import provideIcon from "@/IconProvider/IconProvider";
 import HeadingSection from "@/utils/provideHeadingSubheading";
+import Link from "next/link";
 
 const CoreOfferings = () => {
 	const staffingSolutions = [
 		{
 			id: 1,
 			title: "IT & Cybersecurity",
+			link: "it-&-cybersecurity",
 			description: "Protect your business with IT and cybersecurity solutions.",
 			image: "/Home/CO_Image1.jpg",
 			alt: "IT professionals working on cybersecurity",
@@ -22,6 +24,7 @@ const CoreOfferings = () => {
 		{
 			id: 2,
 			title: "Engineering & Technical",
+			link: "engineering-technical",
 			description: "Innovative engineering and technical solutions.",
 			image: "/Home/CO_Image2.jpg",
 			alt: "Engineering professional working on technical solutions",
@@ -29,6 +32,7 @@ const CoreOfferings = () => {
 		{
 			id: 3,
 			title: "Healthcare, Admin, Finance",
+			link: "healthcare-admin-finance",
 			description: "Solutions for healthcare, admin, and finance.",
 			image: "/Home/CO_Image3.jpg",
 			alt: "Healthcare and finance professionals collaborating",
@@ -122,29 +126,31 @@ const CoreOfferings = () => {
 						{/* Staffing Cards Grid */}
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 							{staffingSolutions.map((solution) => (
-								<Card
-									key={solution.id}
-									className="group hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-									<CardHeader className=" mt-5 text-center ">
-										<CardTitle className=" text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-											{solution.title}
-										</CardTitle>
-										<CardDescription className=" max-w-60 mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
-											{solution.description}
-										</CardDescription>
-									</CardHeader>
-									<CardContent className="p-6 ">
-										<div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden rounded-lg ">
-											<Image
-												src={solution.image}
-												alt={solution.alt}
-												fill
-												className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-										</div>
-									</CardContent>
-								</Card>
+								<Link href={solution.link}>
+									<Card
+										key={solution.id}
+										className="group hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+										<CardHeader className=" mt-5 text-center ">
+											<CardTitle className=" text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+												{solution.title}
+											</CardTitle>
+											<CardDescription className=" max-w-60 mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
+												{solution.description}
+											</CardDescription>
+										</CardHeader>
+										<CardContent className="p-6 ">
+											<div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden rounded-lg ">
+												<Image
+													src={solution.image}
+													alt={solution.alt}
+													fill
+													className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+												/>
+												<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+											</div>
+										</CardContent>
+									</Card>
+								</Link>
 							))}
 						</div>
 					</div>
