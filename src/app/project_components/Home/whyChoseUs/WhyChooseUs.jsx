@@ -38,17 +38,20 @@ export function StaffingSection() {
     {
       icon: provideIcon({ name: "government_compliance" }),
       title: "100% Government Compliance",
+
       description:
         "We strictly adhere to federal, state, and local procurement regulations, including FAR and SBA standards.",
     },
     {
       icon: provideIcon({ name: "certified_vendor" }),
       title: "Diversity-Certified Vendor",
+
       description:
         "Proudly Minority-Owned, SBA-Certified, and Women-Owned (WOSB)",
     },
     {
       icon: provideIcon({ name: "nationwide_talent_network" }),
+
       title: "Nationwide Talent Network",
       description:
         "Access to a coast-to-coast talent pool for IT, admin, healthcare, and skilled labor staffing — ready for deployment.",
