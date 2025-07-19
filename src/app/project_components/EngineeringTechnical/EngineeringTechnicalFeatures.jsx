@@ -3,7 +3,7 @@ import React from "react";
 
 function EngineeringTechnicalFeatures() {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8">
+    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8">
       <div className="flex-1 lg:max-w-[60%]">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
           What We Provide
@@ -66,16 +66,14 @@ function EngineeringTechnicalFeatures() {
       </div>
 
       <div className="flex-shrink-0 w-full sm:w-auto lg:max-w-[40%] lg:w-auto">
-        <div className="border rounded-lg overflow-hidden shadow-lg max-w-md mx-auto lg:mx-0">
-          <Image
-            src="/sample.png"
-            alt="Sample Image"
-            width={500}
-            height={400}
-            className="object-cover w-full h-auto"
-            // sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
-          />
-        </div>
+        <Image
+          src="/Home/Staffing Solution/engineering_technical.png"
+          alt="Sample Image"
+          width={500}
+          height={400}
+          className="object-cover w-full h-auto"
+          // sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+        />
       </div>
     </div>
   );
