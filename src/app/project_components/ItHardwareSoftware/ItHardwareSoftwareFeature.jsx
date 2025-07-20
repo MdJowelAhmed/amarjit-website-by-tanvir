@@ -3,18 +3,18 @@ import React from "react";
 
 function ItHardwareSoftwareFeature() {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8">
+    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8 text-white mb-10">
       <div className="flex-1 lg:max-w-[45%]">
         <div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <h1 className="gradient-h1  text-2xl sm:text-6xl lg:text-6xl font-bold  py-2.5 ">
             Our Offerings
           </h1>
-          <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4 sm:mt-6 lg:mt-8">
+          <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4 sm:mt-6 lg:mt-10">
             Hardware Solutions
           </h2>
 
           <div>
-            <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-3 list-disc pl-4 sm:pl-6 lg:pl-8">
+            <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-3 list-disc pl-4 sm:pl-6 lg:pl-8 text-sm">
               <li>Laptops, Desktops, Workstations (HP, Dell, Lenovo)</li>
               <li>Servers & Storage Solutions (Rack, Blade, SAN/NAS)</li>
               <li>Network Infrastructure (Switches, Routers, Firewalls)</li>
@@ -29,7 +29,7 @@ function ItHardwareSoftwareFeature() {
           </h2>
 
           <div>
-            <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-3 list-disc pl-4 sm:pl-6 lg:pl-8">
+            <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-3 list-disc pl-4 sm:pl-6 lg:pl-8 text-sm">
               <li>Microsoft 365 / Azure / Windows Server</li>
               <li>Adobe Creative Cloud, AutoCAD, QuickBooks</li>
               <li>Cybersecurity Suites (Symantec, McAfee, Bitdefender)</li>
@@ -44,7 +44,7 @@ function ItHardwareSoftwareFeature() {
           </h2>
 
           <div>
-            <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-3 list-disc pl-4 sm:pl-6 lg:pl-8">
+            <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-3 list-disc pl-4 sm:pl-6 lg:pl-8 text-sm">
               <li>Product Sourcing & Vendor-Agnostic Consultation</li>
               <li>Licensing Management & Renewal Support</li>
               <li>Installation & Configuration</li>

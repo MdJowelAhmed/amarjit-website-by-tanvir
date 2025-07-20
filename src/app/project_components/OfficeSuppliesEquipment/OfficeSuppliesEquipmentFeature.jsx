@@ -3,13 +3,13 @@ import React from "react";
 
 function OfficeSuppliesEquipmentFeature() {
   return (
-    <div className="min-h-screen lg:py-24">
+    <div className="min-h-screen lg:py-24 text-white">
       <div className="relative z-10 container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Main Content */}
           <div className="lg:col-span-2 space-y-6">
             {/* Header */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+            <h1 className="gradient-h1 text-2xl sm:text-3xl lg:text-6xl font-bold">
               Our Product Categories
             </h1>
 
@@ -135,7 +135,7 @@ function OfficeSuppliesEquipmentFeature() {
             </div>
 
             {/* Why Choose Us */}
-            <div className=" rounded-lg p-6 border border-black">
+            <div className=" rounded-lg p-6 get-in-touch-card">
               <h2 className="text-2xl font-semibold mb-6">Why Choose Us?</h2>
 
               <div className="space-y-4">

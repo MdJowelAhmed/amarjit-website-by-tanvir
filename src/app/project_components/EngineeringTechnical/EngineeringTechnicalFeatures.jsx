@@ -3,9 +3,9 @@ import React from "react";
 
 function EngineeringTechnicalFeatures() {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8">
+    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8 text-white mb-10">
       <div className="flex-1 lg:max-w-[60%]">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+        <h1 className="gradient-h1 text-2xl sm:text-3xl lg:text-6xl font-bold">
           What We Provide
         </h1>
         <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4 sm:mt-6 lg:mt-8">
@@ -18,7 +18,7 @@ function EngineeringTechnicalFeatures() {
         </p>
 
         <div>
-          <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 list-disc pl-4 sm:pl-6 lg:pl-8">
+          <ul className="mt-4 sm:mt-6 space-y-1 sm:space-y-4 list-disc pl-4 sm:pl-6 lg:pl-8 ">
             <li>Mechanical & Electrical Engineers</li>
             <li>Civil & Structural Engineers</li>
             <li>Systems Engineers & Technicians</li>

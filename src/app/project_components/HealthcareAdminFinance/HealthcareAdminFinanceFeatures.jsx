@@ -3,10 +3,10 @@ import React from "react";
 
 function HealthcareAdminFinanceFeatures() {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8">
-      <div className="flex-1 lg:max-w-[45%]">
+    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8 text-white mb-10">
+      <div className="flex-1 lg:max-w-[55%]">
         <div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+          <h1 className="gradient-h1 text-2xl sm:text-3xl lg:text-6xl font-bold w-full">
             Our Staffing Capabilities
           </h1>
           <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4 sm:mt-6 lg:mt-8">

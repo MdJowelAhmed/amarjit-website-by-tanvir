@@ -3,12 +3,12 @@ import React from "react";
 
 function Features() {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8">
+    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8 text-white">
       <div className="flex-1 lg:max-w-[60%]">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+        <h1 className=" gradient-h1  text-2xl sm:text-3xl lg:text-6xl font-bold">
           What We Offer
         </h1>
-        <h2 className="text-lg sm:text-xl lg:text-2xl mt-4 sm:mt-6 lg:mt-8">
+        <h2 className="text-lg sm:text-xl lg:text-3xl font-semibold mt-4 sm:mt-6 lg:mt-8">
           Comprehensive IT & Cybersecurity Staffing
         </h2>
         <p className="text-base sm:text-lg mt-2">
@@ -22,7 +22,7 @@ function Features() {
               <h3 className="text-lg sm:text-xl font-semibold">
                 Cybersecurity Experts
               </h3>
-              <p className="text-sm sm:text-base mt-1">
+              <p className="text-sm sm:text-base mt-1 ">
                 SOC Analysts, Penetration Testers, Threat Intelligence Analysts
               </p>
             </li>
