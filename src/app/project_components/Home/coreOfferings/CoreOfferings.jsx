@@ -113,17 +113,6 @@ const CoreOfferings = () => {
 
           {/* Staffing Solutions Section */}
           <div className="mb-16 sm:mb-20">
-            {/* <div className="text-center mb-12 sm:mb-16">
-							<h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-blue-900 mb-4 sm:mb-6">
-								Staffing Solutions
-							</h3>
-							<p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-								Providing tailored staffing solutions to meet your business
-								needs. Our services connect you with skilled professionals,
-								ensuring the right talent is in place to drive success and
-								growth.
-							</p>
-						</div> */}
             {StaffingSection()}
 
             {/* Staffing Cards Grid */}
@@ -163,17 +152,6 @@ const CoreOfferings = () => {
 
           {/* Staffing Solutions Section */}
           <div className="mb-16 sm:mb-20">
-            {/* <div className="text-center mb-12 sm:mb-16">
-							<h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-blue-900 mb-4 sm:mb-6">
-								Product Provisioning 
-							</h3>
-							<p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-								Streamline your business with efficient product provisioning. We
-								ensure smooth and timely delivery, manage inventory, and
-								optimize supply chains, helping you provide products seamlessly
-								to meet customer demands and enhance operational efficiency.
-							</p>
-						</div> */}
             {productProvision()}
 
             {/* Staffing Cards Grid */}
