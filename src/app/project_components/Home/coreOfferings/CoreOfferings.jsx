@@ -91,18 +91,18 @@ const CoreOfferings = () => {
 
   return (
     <>
-      <section className="bg-white  py-16 sm:py-20 lg:pt-24 lg:pb-0  overflow-hidden">
+      <section className="bg-transparent py-16 sm:py-20 lg:pt-24 lg:pb-0  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Header Section */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <div className="flex items-center justify-center gap-4 mb-6">
               <div>{provideIcon({ name: "core_offering" })}</div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 sm:mb-8">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-b from-[#EFF4FF] to-[#BFD3FE] bg-clip-text text-transparent mb-6 sm:mb-8">
                 Our Core Offerings
               </h2>
             </div>
 
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-white max-w-4xl mx-auto leading-relaxed">
               We offer end-to-end solutions tailored to your business needs,
               optimizing operations, enhancing efficiency, and providing
               strategic guidance. Our services drive growth through process
@@ -130,12 +130,12 @@ const CoreOfferings = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {staffingSolutions.map((solution) => (
                 <Link href={solution.link} key={solution.id}>
-                  <Card className="group hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+                  <Card className="get-in-touch-card h-[30rem] group hover:shadow-xl transition-all duration-300">
                     <CardHeader className=" mt-5 text-center ">
-                      <CardTitle className=" text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      <CardTitle className=" text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors">
                         {solution.title}
                       </CardTitle>
-                      <CardDescription className=" max-w-60 mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
+                      <CardDescription className=" max-w-60 mx-auto text-white text-sm sm:text-base leading-relaxed">
                         {solution.description}
                       </CardDescription>
                     </CardHeader>
@@ -157,7 +157,7 @@ const CoreOfferings = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white  py-16 sm:py-20 lg:py-12  overflow-hidden">
+      <section className="bg-transparent  py-16 sm:py-20 lg:py-12  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           {/* Header Section */}
 
@@ -180,12 +180,12 @@ const CoreOfferings = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {productProvisioning.map((item) => (
                 <Link href={item.link} key={item.id}>
-                  <Card className="group hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
+                  <Card className="get-in-touch-card h-[30rem] group hover:shadow-xl transition-all duration-300">
                     <CardHeader className=" mt-5 text-center ">
-                      <CardTitle className=" text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      <CardTitle className=" text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors">
                         {item.title}
                       </CardTitle>
-                      <CardDescription className=" max-w-60 mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
+                      <CardDescription className=" max-w-60 mx-auto text-white text-sm sm:text-base leading-relaxed">
                         {item.description}
                       </CardDescription>
                     </CardHeader>

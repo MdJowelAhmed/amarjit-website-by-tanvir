@@ -67,21 +67,18 @@ export function StaffingSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {features.map((feature, index) => (
-        <Card
-          key={index}
-          className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 h-full"
-        >
+        <Card key={index} className="get-in-touch-card h-full">
           <CardContent className="p-6 flex flex-col items-center text-center h-full">
             {/* Icon */}
-            <div className="mb-4 flex-shrink-0">{feature.icon}</div>
+            <div className="mb-4 flex-shrink-0 ">{feature.icon}</div>
 
             {/* Title */}
-            <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-tight">
+            <h3 className="text-xl font-semibold text-white mb-3 leading-tight">
               {feature.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-600 leading-relaxed text-sm flex-grow">
+            <p className="text-white leading-relaxed text-sm flex-grow">
               {feature.description}
             </p>
           </CardContent>
