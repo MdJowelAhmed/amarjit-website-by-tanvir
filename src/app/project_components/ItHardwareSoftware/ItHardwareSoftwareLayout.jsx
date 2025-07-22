@@ -6,7 +6,7 @@ import ItHardwareSoftwareFeature from "./ItHardwareSoftwareFeature";
 
 function ItHardwareSoftwareLayout() {
   const setItHardwareSoftwareBanner = {
-    src: "/Home/Home Image.jpg",
+    src: "/Home/it-hardware.jpg",
     heading: " IT Hardware & Software Solutions",
     subheading:
       "From enterprise-grade hardware to modern software platforms, we provide scalable IT solutions tailored to your needs.",

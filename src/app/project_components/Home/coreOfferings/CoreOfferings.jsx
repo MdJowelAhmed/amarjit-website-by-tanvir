@@ -119,8 +119,10 @@ const CoreOfferings = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {staffingSolutions.map((solution) => (
                 <Link href={solution.link} key={solution.id}>
-                  <Card className="get-in-touch-card h-[30rem] group hover:shadow-xl transition-all duration-300">
-                    <CardHeader className=" mt-5 text-center ">
+                  <Card className="get-in-touch-card h-[30rem] group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    {/* Solid color overlay that grows from top on hover */}
+                    <div className="absolute left-0 top-0 w-full h-0 group-hover:h-full bg-[#bbbbfa] transition-all duration-500 z-10 pointer-events-none"></div>
+                    <CardHeader className="mt-5 text-center relative z-20">
                       <CardTitle className=" text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors">
                         {solution.title}
                       </CardTitle>
@@ -128,7 +130,7 @@ const CoreOfferings = () => {
                         {solution.description}
                       </CardDescription>
                     </CardHeader>
-                    <CardContent className="p-6 ">
+                    <CardContent className="p-6 relative z-20">
                       <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden rounded-lg ">
                         <Image
                           src={solution.image}
@@ -136,7 +138,6 @@ const CoreOfferings = () => {
                           fill
                           className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       </div>
                     </CardContent>
                   </Card>
@@ -158,8 +159,10 @@ const CoreOfferings = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {productProvisioning.map((item) => (
                 <Link href={item.link} key={item.id}>
-                  <Card className="get-in-touch-card h-[30rem] group hover:shadow-xl transition-all duration-300">
-                    <CardHeader className=" mt-5 text-center ">
+                  <Card className="get-in-touch-card h-[30rem] group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    {/* Solid color overlay that grows from top on hover */}
+                    <div className="absolute left-0 top-0 w-full h-0 group-hover:h-full bg-[#bbbbfa] transition-all duration-500 z-10 pointer-events-none"></div>
+                    <CardHeader className="mt-5 text-center relative z-20">
                       <CardTitle className=" text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors">
                         {item.title}
                       </CardTitle>
@@ -167,7 +170,7 @@ const CoreOfferings = () => {
                         {item.description}
                       </CardDescription>
                     </CardHeader>
-                    <CardContent className="p-6 ">
+                    <CardContent className="p-6 relative z-20">
                       <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden rounded-lg ">
                         <Image
                           src={item.image}
@@ -175,7 +178,6 @@ const CoreOfferings = () => {
                           fill
                           className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       </div>
                     </CardContent>
                   </Card>

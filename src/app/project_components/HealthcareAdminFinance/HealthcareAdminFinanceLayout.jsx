@@ -5,7 +5,7 @@ import HealthcareAdminFinanceFeatures from "./HealthcareAdminFinanceFeatures";
 
 function HealthcareAdminFinanceLayout() {
   const setHealthcareAdminFinanceBanner = {
-    src: "/Home/Home Image.jpg",
+    src: "/Home/healthcare.jpg",
     heading: "People You Can Rely On — For the Roles That Keep You Running",
     subheading:
       "From medical assistants to case managers, administrative support to accounting professionals — we provide vetted talent to keep operations smooth, secure, and fully compliant.",

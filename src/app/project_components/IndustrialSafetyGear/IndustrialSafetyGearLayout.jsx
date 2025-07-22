@@ -6,7 +6,7 @@ import IndustrialSafetyGearFeature from "./IndustrialSafetyGearFeature";
 
 function IndustrialSafetyGearLayout() {
   const setIndustrialSafetyGearBanner = {
-    src: "/Home/Home Image.jpg",
+    src: "/Home/industrial_safety.jpg",
     heading: "Industrial & Safety Gear",
     subheading:
       "Your Trusted Source for Workplace Protection, Compliance & Performance",

@@ -4,7 +4,7 @@ import Banner from "../Home/banner/Banner";
 
 function OfficeSuppliesEquipmentLayout() {
   const setOfficeSuppliesEquipmentBanner = {
-    src: "/Home/Home Image.jpg",
+    src: "/Home/office-supplies.jpg",
     heading: "Office Supplies & Equipment",
     subheading: "Your Trusted Source for Quality Office Supplies and Equipment",
   };

@@ -3,9 +3,9 @@ import OfficeSuppliesEquipmentLayout from "../project_components/OfficeSuppliesE
 
 function Page() {
   return (
-    <div>
+    <>
       <OfficeSuppliesEquipmentLayout />
-    </div>
+    </>
   );
 }
 

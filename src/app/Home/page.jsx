@@ -18,21 +18,10 @@ function Homepage() {
         heading={setHomeBanner.heading}
         subheading={setHomeBanner.subheading}
       />
-      {/* <div
-        className="bg"
-        style={{
-          backgroundImage: "linear-gradient(90deg, #040412 0%, #0E2263 47.12%)",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          minHeight: "100vh",
-          width: "100%",
-          boxShadow: "0 0 80px 0 rgba(0,0,0,0.2) inset",
-        }}
-      > */}
+
       <CoreOfferings />
       <WhyChooseUs />
-      {/* </div> */}
+
       <GetInTouch />
     </div>
   );

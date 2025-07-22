@@ -5,7 +5,7 @@ import EngineeringTechnicalFeatures from "./EngineeringTechnicalFeatures";
 
 function EngineeringTechnicalLayout() {
   const setEngineeringTechnicalBanner = {
-    src: "/Home/Home Image.jpg",
+    src: "/Home/engineering_technical.jpg",
     heading:
       "From Concept to Completion — The Right Technical Talent Delivered On Demand",
     subheading:

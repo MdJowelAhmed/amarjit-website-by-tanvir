@@ -5,7 +5,7 @@ import { StaffingSection } from "../Home/whyChoseUs/WhyChooseUs";
 
 function ItAndSecurityLayout() {
   const setItAndCyberSecurityBanner = {
-    src: "/Home/Home Image.jpg",
+    src: "/Home/it-cyber-security.jpg",
     heading:
       "Secure, Scalable, and Ready to Deploy IT & Cyber Talent & Solutions.",
     subheading:
