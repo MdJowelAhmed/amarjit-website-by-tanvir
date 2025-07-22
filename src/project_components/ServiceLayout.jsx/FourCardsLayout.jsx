@@ -227,14 +227,14 @@ function FourCardsLayout({ isGCA }) {
         </Button>
       </div>
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-w-lg md:max-w-2xl lg:max-w-4xl ">
+        <DialogContent className="max-w-lg md:max-w-2xl lg:max-w-4xl bg-indigo-100">
           <div className="mt-2 text-center">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
               Request a Custom Quote
             </h1>
           </div>
 
-          <div className="border rounded-md p-4 mt-4">
+          <div className="border border-blue-950 rounded-md p-4 mt-4">
             <DialogHeader className="pb-4">
               <DialogTitle>Contact Form</DialogTitle>
             </DialogHeader>
@@ -242,17 +242,31 @@ function FourCardsLayout({ isGCA }) {
             <form className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name</Label>
-                <Input id="name" placeholder="Your full name here" />
+                <Input
+                  id="name"
+                  placeholder="Your full name here"
+                  className="border border-blue-950 placeholder:text-gray-400"
+                />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input id="email" type="email" placeholder="your@email.com" />
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  className="border border-blue-950 placeholder:text-gray-400"
+                />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number</Label>
-                <Input id="phone" type="tel" placeholder="+1234567890" />
+                <Input
+                  id="phone"
+                  type="tel"
+                  placeholder="+1234567890"
+                  className="border border-blue-950 placeholder:text-gray-400"
+                />
               </div>
 
               <div className="space-y-2">
@@ -260,13 +274,14 @@ function FourCardsLayout({ isGCA }) {
                 <Input
                   id="organization"
                   placeholder="Name of your organization"
+                  className="border border-blue-950 placeholder:text-gray-400"
                 />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="service">Service Type</Label>
                 <Select id="service">
-                  <SelectTrigger className="w-full">
+                  <SelectTrigger className="w-full border border-blue-950 ">
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
@@ -285,11 +300,12 @@ function FourCardsLayout({ isGCA }) {
                   id="message"
                   placeholder="Tell us about your staffing needs..."
                   rows={4}
+                  className="border border-blue-950 placeholder:text-gray-400"
                 />
               </div>
 
               <div className="flex items-start space-x-2">
-                <Checkbox id="terms" />
+                <Checkbox id="terms" className="border border-blue-950" />
                 <Label htmlFor="terms">
                   I'd like to receive a capabilities statement.
                 </Label>

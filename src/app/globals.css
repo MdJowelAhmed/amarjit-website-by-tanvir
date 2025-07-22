@@ -115,7 +115,12 @@
 .gradient-h1 {
   @apply bg-gradient-to-b from-[#EFF4FF] to-[#BFD3FE] bg-clip-text text-transparent;
 }
-
+.gardient-style {
+  background: var(
+    --Gradiant,
+    linear-gradient(270deg, #0e2263 35.58%, #040412 100%)
+  );
+}
 .get-in-touch-card {
   border-radius: 8px;
   border: 2px solid var(--Foundation-Grey-Light, #f2f2f2);
