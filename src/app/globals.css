@@ -153,6 +153,11 @@
   border: none;
 }
 
+.custom-btn {
+  background: linear-gradient(180deg, #eff4ff 0%, #bfd3fe 100%);
+  border-radius: 8px;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
