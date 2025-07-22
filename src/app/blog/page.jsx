@@ -1,12 +1,12 @@
 import React from "react";
-import BlogLayout from "../project_components/Blog/BlogLayout";
+import BlogLayout from "@/project_components/Blog/BlogLayout";
 
 function BlogPage() {
-	return (
-		<>
-			<BlogLayout />
-		</>
-	);
+  return (
+    <>
+      <BlogLayout />
+    </>
+  );
 }
 
 export default BlogPage;

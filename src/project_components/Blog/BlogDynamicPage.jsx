@@ -4,8 +4,9 @@ import Banner from "../Home/banner/Banner";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { cardInfo } from "@/app/project_components/Blog/blogData";
+
 import { ArrowLeft } from "lucide-react";
+import { cardInfo } from "./blogData";
 
 function BlogDynamicPage() {
   const params = useParams();

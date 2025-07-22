@@ -1,12 +1,12 @@
+import ProductProvisionLayout from "@/project_components/ProductProvision/ProductProvisionLayout";
 import React from "react";
-import ProductProvisionLayout from "../project_components/ProductProvision/ProductProvisionLayout";
 
 function page() {
-	return (
-		<>
-			<ProductProvisionLayout />
-		</>
-	);
+  return (
+    <>
+      <ProductProvisionLayout />
+    </>
+  );
 }
 
 export default page;

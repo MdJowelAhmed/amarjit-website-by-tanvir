@@ -1,12 +1,12 @@
+import IndustrialServices from "@/project_components/Industrial Serve/IndustrialServices";
 import React from "react";
-import IndustrialServices from "../project_components/Industrial Serve/IndustrialServices";
 
 function IndustrialServe() {
-	return (
-		<>
-			<IndustrialServices />
-		</>
-	);
+  return (
+    <>
+      <IndustrialServices />
+    </>
+  );
 }
 
 export default IndustrialServe;

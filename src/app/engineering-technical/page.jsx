@@ -1,5 +1,5 @@
+import EngineeringTechnicalLayout from "@/project_components/EngineeringTechnical/EngineeringTechnicalLayout";
 import React from "react";
-import EngineeringTechnicalLayout from "../project_components/EngineeringTechnical/EngineeringTechnicalLayout";
 
 function page() {
   return (

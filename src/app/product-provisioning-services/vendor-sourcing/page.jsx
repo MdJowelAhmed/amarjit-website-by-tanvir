@@ -1,12 +1,12 @@
+import ServiceDynamicPageLayout from "@/project_components/ServiceDynamicPageLayout";
 import React from "react";
-import ServiceDynamicPageLayout from "../../project_components/ServiceDynamicPageLayout";
 
 function VendorSourcing() {
-	return (
-		<>
-			<ServiceDynamicPageLayout />
-		</>
-	);
+  return (
+    <>
+      <ServiceDynamicPageLayout />
+    </>
+  );
 }
 
 export default VendorSourcing;

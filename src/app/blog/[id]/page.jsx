@@ -1,9 +1,8 @@
-import BlogDynamicPage from "@/app/project_components/Blog/BlogDynamicPage";
-
+import BlogDynamicPage from "@/project_components/Blog/BlogDynamicPage";
 import React from "react";
 
 function Page() {
-	return <BlogDynamicPage />;
+  return <BlogDynamicPage />;
 }
 
 export default Page;
