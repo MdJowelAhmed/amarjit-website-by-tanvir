@@ -5,7 +5,7 @@ import provideIcon from "@/IconProvider/IconProvider";
 
 export function Footer() {
   return (
-    <div className="footer-glass text-white dark:text-gray-300">
+    <div className="bg-transparent footer-glass text-white dark:text-gray-300">
       <div className=" mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Logo and Quick Links */}
@@ -22,56 +22,56 @@ export function Footer() {
               <div>
                 <ul className="space-y-1">
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-primary transition-colors"
+                    <Link
+                      href="/product-provisioning-services"
+                      className="hover:text-white/70 transition-colors"
                     >
                       Service
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-primary transition-colors"
+                    <Link
+                      href="/about-us"
+                      className="hover:text-white/70 transition-colors"
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-primary transition-colors"
+                    <Link
+                      href="/contact-us"
+                      className="hover:text-white/70 transition-colors"
                     >
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <ul className="space-y-1">
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-primary transition-colors"
+                    <Link
+                      href="/blog"
+                      className="hover:text-white/70 transition-colors"
                     >
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="hover:text-primary transition-colors"
+                    <Link
+                      href="/industrial-serve"
+                      className="hover:text-white/70 transition-colors"
                     >
                       Industrial Serve
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="#"
-                      className="hover:text-primary transition-colors"
+                      className="hover:text-white/70 transition-colors"
                     >
                       Featured Clients
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

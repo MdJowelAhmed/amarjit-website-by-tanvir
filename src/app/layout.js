@@ -21,15 +21,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <div
           style={{
-            backgroundImage:
-              "linear-gradient(90deg, #040412 0%, #0E2263 47.12%)",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+            backgroundImage: `
+              linear-gradient(90deg, #040412 0%, #0E2263 47.12%),
+              url('/bg-image.png')
+            `,
+            backgroundSize: "cover, cover",
+            backgroundRepeat: "no-repeat, no-repeat",
+            backgroundPosition: "center, center",
+            backgroundBlendMode: "overlay",
             minHeight: "100vh",
             width: "100%",
           }}

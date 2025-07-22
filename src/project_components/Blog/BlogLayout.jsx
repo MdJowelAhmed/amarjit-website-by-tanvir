@@ -30,7 +30,7 @@ function BlogLayout() {
 
       <div className="container mx-auto max-w-11/12 flex items-center justify-evenly flex-wrap lg:py-24">
         <BlogCard cardInfo={cardInfo} />
-        <Pagination className="mt-4">
+        <Pagination className="mt-4 text-white">
           <PaginationContent>
             <PaginationItem>
               <PaginationPrevious href="#" />
@@ -39,7 +39,7 @@ function BlogLayout() {
               <PaginationLink href="#">1</PaginationLink>
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink href="#" isActive>
+              <PaginationLink href="#" isActive className="text-blue-900">
                 2
               </PaginationLink>
             </PaginationItem>
