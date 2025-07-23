@@ -6,7 +6,7 @@ import LeadershipTeam from "./LeadershipTeam";
 
 function AboutUsLayout() {
 	const setAboutUsBanner = {
-		src: "/About US/About_Us.jpg",
+		src: "/About US/About_Us.png",
 		heading: "About Us",
 	};
 	return (
