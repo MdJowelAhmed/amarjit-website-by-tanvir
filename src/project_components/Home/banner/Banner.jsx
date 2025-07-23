@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import NavBar from "../../navBar/NavBar";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 
 function Banner({ src, heading, subheading }) {
   const path = usePathname();
@@ -115,7 +116,15 @@ function Banner({ src, heading, subheading }) {
         <div className="w-full max-w-7xl text-center text-white">
           {/* Main Heading */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-4 sm:mb-6 drop-shadow-lg">
-            {heading}
+            <Typewriter
+              words={[heading]}
+              loop={Infinity}
+              cursor
+              cursorStyle="|"
+              typeSpeed={120}
+              deleteSpeed={70}
+              delaySpeed={2000}
+            />
           </h1>
 
           {/* Subheading */}
