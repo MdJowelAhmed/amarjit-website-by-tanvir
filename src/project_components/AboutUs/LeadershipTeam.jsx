@@ -37,6 +37,7 @@ function LeadershipTeam() {
         " John manages daily operations, delivery timelines, and large-scale client programs across multiple industries. His background in IT services, logistics, and contract fulfillment ensures smooth execution from intake to implementation.",
     },
   ];
+  // console.log(teamMembers[0].src);
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 bg-transparent mb-10">
