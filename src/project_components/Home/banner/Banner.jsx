@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import NavBar from "../../navBar/NavBar";
 import { usePathname } from "next/navigation";
@@ -8,6 +8,8 @@ import Link from "next/link";
 
 function Banner({ src, heading, subheading }) {
   const path = usePathname();
+  const [displayedText, setDisplayedText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
 
   // Memoize route checks to prevent unnecessary recalculations
   const routeConfig = useMemo(() => {
@@ -48,6 +50,24 @@ function Banner({ src, heading, subheading }) {
 
     return { ...routes, showSubheading };
   }, [path]);
+
+  // Character animation effect
+  useEffect(() => {
+    if (charIndex < heading?.length) {
+      const timer = setTimeout(() => {
+        setDisplayedText(prev => prev + heading[charIndex]);
+        setCharIndex(charIndex + 1);
+      }, 50); // Speed of animation - adjust as needed
+      
+      return () => clearTimeout(timer);
+    }
+  }, [charIndex, heading]);
+
+  // Reset animation when heading changes
+  useEffect(() => {
+    setDisplayedText("");
+    setCharIndex(0);
+  }, [heading]);
 
   // Memoize container classes
   const containerClasses = useMemo(() => {
@@ -113,9 +133,10 @@ function Banner({ src, heading, subheading }) {
       {/* Content */}
       <main className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-7xl text-center text-white">
-          {/* Main Heading */}
+          {/* Main Heading with Animation */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-4 sm:mb-6 drop-shadow-lg">
-            {heading}
+            <span className="inline-block">{displayedText}</span>
+            {/* <span className="animate-pulse">|</span> */}
           </h1>
 
           {/* Subheading */}
