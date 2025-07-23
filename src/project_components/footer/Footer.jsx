@@ -112,7 +112,7 @@ export function Footer() {
                 <Input
                   type="email"
                   placeholder="Your email"
-                  className="border-none focus:border-none shadow-none max-w-64"
+                  className="border-none focus:border-none shadow-none max-w-64 placeholder:text-blue-950"
                 />
                 <Button className="footer-signup-btn-gradient max-w-20 rounded-full">
                   Sign Up

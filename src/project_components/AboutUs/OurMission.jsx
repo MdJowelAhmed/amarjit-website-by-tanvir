@@ -29,7 +29,7 @@ function OurMission() {
             </div>
             <div className="flex-shrink-0 order-1 lg:order-2">
               <Image
-                src="/About Us/About_1.png"
+                src="/AboutUs/About_1.png"
                 width={400}
                 height={400}
                 alt="Our Mission"
@@ -62,7 +62,7 @@ function OurMission() {
             </div>
             <div className="flex-shrink-0 order-1 lg:order-2">
               <Image
-                src="/About Us/About_2.png"
+                src="/AboutUs/About_2.png"
                 width={400}
                 height={400}
                 alt="Our Mission"
@@ -99,7 +99,7 @@ function OurMission() {
             </div>
             <div className="flex-shrink-0 order-1 lg:order-2">
               <Image
-                src="/About Us/About_3.png"
+                src="/AboutUs/About_3.png"
                 width={400}
                 height={400}
                 alt="Our Mission"
