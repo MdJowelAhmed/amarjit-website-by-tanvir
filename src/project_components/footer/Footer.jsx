@@ -108,11 +108,11 @@ export function Footer() {
             </div>
 
             <div className="flex flex-col space-y-2 max-w-full">
-              <div className="footer-newsletter-gradient p-4 max-w-4/5 rounded-full flex gap-4">
+              <div className="footer-newsletter-gradient  p-4 max-w-4/5 rounded-full flex gap-4">
                 <Input
                   type="email"
                   placeholder="Your email"
-                  className="border-none focus:border-none shadow-none max-w-64"
+                  className="border-none font-semibold placeholder:text-black focus:border-none shadow-none max-w-64"
                 />
                 <Button className="footer-signup-btn-gradient max-w-20 rounded-full">
                   Sign Up
