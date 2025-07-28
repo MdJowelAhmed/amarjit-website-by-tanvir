@@ -1,91 +1,130 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import HeadingSection from "@/utils/provideHeadingSubheading";
 
-function GSATable() {
-  function gsaHeading() {
-    return (
-      <section>
-        <HeadingSection
-          heading="GSA Schedule Holder"
-          subheading="As a GSA Schedule Holder, we offer streamlined procurement with pre-approved pricing, terms, and compliance standards trusted by federal agencies. Our services and products are easily accessible through the General Services Administration Schedule, reducing procurement time and risk."
-        />
-      </section>
-    );
-  }
-  function naicsHeading() {
-    return (
-      <section>
-        <HeadingSection
-          heading="NAICS Codes & DUNS/CAGE"
-          subheading="We maintain all required business identifiers to ensure full alignment with federal and commercial procurement standards."
-        />
-      </section>
-    );
-  }
+function NAICSTable() {
+	function naicsHeading() {
+		return (
+			<section>
+				<HeadingSection
+					heading="NAICS Codes & DUNS/CAGE"
+					subheading="We maintain all required business identifiers to ensure full alignment with federal and commercial procurement standards."
+				/>
+			</section>
+		);
+	}
+	const naicsData = {
+		staffingTalent: [
+			{ code: "561320", description: "Temporary Help Services" },
+			{ code: "561311", description: "Employment Placement Agencies" },
+			{ code: "541612", description: "Human Resources Consulting Services" },
+		],
+		procurementProducts: [
+			{
+				code: "423840",
+				description: "Industrial Supplies Merchant Wholesalers",
+			},
+			{
+				code: "423430",
+				description:
+					"Computer and Computer Peripheral Equipment and Software Wholesalers",
+			},
+			{
+				code: "423490",
+				description:
+					"Other Professional Equipment and Supplies Merchant Wholesalers",
+			},
+		],
+		technologySolutions: [
+			{ code: "541511", description: "Custom Computer Programming Services" },
+			{ code: "541512", description: "Computer Systems Design Services" },
+			{ code: "541519", description: "Other Computer Related Services" },
+		],
+		logisticsSupplyChain: [
+			{ code: "488510", description: "Freight Transportation Arrangement" },
+			{
+				code: "541614",
+				description:
+					"Process, Physical Distribution, and Logistics Consulting Services",
+			},
+			{ code: "492110", description: "Couriers and Express Delivery Services" },
+			{ code: "493110", description: "General Warehousing and Storage" },
+		],
+		governmentSupport: [
+			{ code: "561110", description: "Office Administrative Services" },
+			{
+				code: "541611",
+				description:
+					"Administrative Management and General Management Consulting Services",
+			},
+		],
+	};
 
-  const gsaData = [
-    { label: "GSA Contract Number", value: "+1234567890" },
-    {
-      label: "State / City",
-      value: "State of New York, Washington, D.C., Maryland, Virginia",
-    },
-    { label: "Schedule Type", value: "IT Schedule 70, MAS, etc" },
-    { label: "SINs (Special Item Numbers)", value: "123456" },
-    { label: "Awarded Categories", value: "[List categories or services]" },
-    { label: "Contract Period", value: "01 July 2025 - 10 July 2025" },
-  ];
+	const CategoryTable = ({ title, data }) => (
+		<div className="mb-10 border border-[#4f3075]">
+			{/* Category Header */}
+			<div className=" border-b border-[#4f3075]">
+				<h3 className="text-center font-semibold py-4 px-4 text-gray-800 text-lg">
+					{title}
+				</h3>
+			</div>
 
-  const naicsData = [
-    {
-      label: "NAICS Codes",
-      value: "541519 (IT), 541611 (Consulting), 541512 (Systems Design)",
-    },
-    { label: "DUNS Number", value: "123456789" },
-    { label: "CAGE Code", value: "1A2B3" },
-  ];
+			{/* Column Headers */}
+			<div className="grid grid-cols-2 bg-gray-50 border-b border-[#4f3075]">
+				<div className="border-r border-[#4f3075] text-center font-semibold text-gray-800 py-3 px-4">
+					Code Type
+				</div>
+				<div className="text-center font-semibold text-gray-800 py-3 px-4">
+					Value
+				</div>
+			</div>
 
-  return (
-    <div className="max-w-6xl flex flex-col gap-10 mx-auto py-20 px-4 sm:px-6 lg:px-8 text-white">
-      <div className="mb-8">
-        {gsaHeading()}
-        <Table className="border-2">
-          <TableBody>
-            {gsaData.map((item, index) => (
-              <TableRow key={index} className="border-2">
-                <TableCell className="font-medium w-1/2 border-2 text-center p-4">
-                  {item.label}
-                </TableCell>
-                <TableCell className="text-center">{item.value}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
+			{/* Data Rows */}
+			{data.map((item, index) => (
+				<div
+					key={index}
+					className="grid grid-cols-2 border-b border-[#4f3075] hover:bg-gray-50">
+					<div className="border-r border-[#4f3075] text-center py-4 px-4 font-medium">
+						{item.code}
+					</div>
+					<div className="text-center py-4 px-4">{item.description}</div>
+				</div>
+			))}
+		</div>
+	);
 
-      <div className="mb-8">
-        {naicsHeading()}
-        <Table className="border-2">
-          <TableBody>
-            {naicsData.map((item, index) => (
-              <TableRow key={index} className="border-2">
-                <TableCell className="font-medium w-1/2 border-2 text-center p-4">
-                  {item.label}
-                </TableCell>
-                <TableCell className="text-center">{item.value}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  );
+	return (
+		<div className="max-w-5xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white">
+			{/* Header Section */}
+			<div className="text-center mb-10">{naicsHeading()}</div>
+
+			{/* Tables */}
+			<div className="space-y-6">
+				<CategoryTable
+					title="Staffing & Talent Services"
+					data={naicsData.staffingTalent}
+				/>
+
+				<CategoryTable
+					title="Procurement & Essential Products"
+					data={naicsData.procurementProducts}
+				/>
+
+				<CategoryTable
+					title="Technology Solutions & Services"
+					data={naicsData.technologySolutions}
+				/>
+
+				<CategoryTable
+					title="Logistics & Supply Chain Services"
+					data={naicsData.logisticsSupplyChain}
+				/>
+
+				<CategoryTable
+					title="Government Contracting Support (General)"
+					data={naicsData.governmentSupport}
+				/>
+			</div>
+		</div>
+	);
 }
 
-export default GSATable;
+export default NAICSTable;
