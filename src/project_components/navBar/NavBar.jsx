@@ -74,7 +74,7 @@ function NavBar() {
 		},
 		{
 			id: 6,
-			label: "Industrial Serve",
+			label: "Industrial Services",
 			link: "/industrial-serve",
 		},
 		{
