@@ -42,7 +42,7 @@ const CoreOfferings = () => {
 		{
 			id: 1,
 			title: "Logistics & Transportation",
-			link: "it-hardware-software",
+			link: "logistics-&-transportation",
 			description:
 				"Our brokers can facilitate every step of the US-Canada cross-border process",
 			image: "/Home/logistics.png",

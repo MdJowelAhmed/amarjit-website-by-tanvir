@@ -5,25 +5,24 @@ import { StaffingSection } from "../Home/whyChoseUs/WhyChooseUs";
 import ItHardwareSoftwareFeature from "./ItHardwareSoftwareFeature";
 
 function ItHardwareSoftwareLayout() {
-  const setItHardwareSoftwareBanner = {
-    src: "/Home/it-hardware.jpg",
-    heading: " IT Hardware & Software Solutions",
-    subheading:
-      "From enterprise-grade hardware to modern software platforms, we provide scalable IT solutions tailored to your needs.",
-  };
-  return (
-    <div>
-      <Banner
-        src={setItHardwareSoftwareBanner.src}
-        heading={setItHardwareSoftwareBanner.heading}
-        subheading={setItHardwareSoftwareBanner.subheading}
-      />
-      <div className="container mx-auto lg:py-24">
-        <ItHardwareSoftwareFeature />
-        <StaffingSection />
-      </div>
-    </div>
-  );
+	const setItHardwareSoftwareBanner = {
+		src: "/Home/logistics_transportation.jpg",
+		heading: "Logistics & Transportation",
+		subheading: "Delivering Your Goods Safely, Swiftly, and Smartly",
+	};
+	return (
+		<div>
+			<Banner
+				src={setItHardwareSoftwareBanner.src}
+				heading={setItHardwareSoftwareBanner.heading}
+				subheading={setItHardwareSoftwareBanner.subheading}
+			/>
+			<div className="container mx-auto lg:py-24">
+				<ItHardwareSoftwareFeature />
+				<StaffingSection />
+			</div>
+		</div>
+	);
 }
 
 export default ItHardwareSoftwareLayout;
