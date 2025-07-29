@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function ItHardwareSoftwareFeature() {
+function LogisticFeature() {
 	return (
 		<div className="flex flex-col lg:flex-row lg:items-start lg:justify-between p-4 sm:p-6 lg:p-8 gap-6 lg:gap-8 text-black mb-10">
 			<div className="flex-1 lg:max-w-[45%]">
@@ -70,4 +70,4 @@ function ItHardwareSoftwareFeature() {
 	);
 }
 
-export default ItHardwareSoftwareFeature;
+export default LogisticFeature;
