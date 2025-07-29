@@ -27,6 +27,7 @@ function Banner({ src, heading, subheading }) {
 			isLogistic: path === "/logistics-&-transportation",
 			isOfficeEquipment: path === "/office-supplies-equipment",
 			isIndustrialSafetyGear: path === "/industrial-safety-gear",
+			isLogisticPage: path === "/logistics-services",
 		};
 
 		// Routes that should show subheading
@@ -43,6 +44,7 @@ function Banner({ src, heading, subheading }) {
 			routes.isEngineeringAndTechnical,
 			routes.isHealthCareAdminFinance,
 			routes.isLogistic,
+			routes.isLogisticPage,
 			routes.isOfficeEquipment,
 			routes.isIndustrialSafetyGear,
 		].some(Boolean);

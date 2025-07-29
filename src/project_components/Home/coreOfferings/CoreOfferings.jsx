@@ -104,11 +104,10 @@ const CoreOfferings = () => {
 						</div>
 
 						<p className="text-base sm:text-lg lg:text-xl text-[#181818] max-w-4xl mx-auto leading-relaxed">
-							We offer end-to-end solutions tailored to your business needs,
-							optimizing operations, enhancing efficiency, and providing
-							strategic guidance. Our services drive growth through process
-							improvements, data insights, and expert support for long-term
-							success.
+							with we provide end-to-end solutions that enhance efficiency,
+							optimize operations, and drive long-term success. Our services are
+							tailored to meet the evolving needs of government and commercial
+							clients with speed, compliance, and precision.
 						</p>
 					</div>
 

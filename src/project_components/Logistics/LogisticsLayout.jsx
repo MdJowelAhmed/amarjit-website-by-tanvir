@@ -3,6 +3,7 @@ import React from "react";
 import Banner from "../Home/banner/Banner";
 import { StaffingSection } from "../Home/whyChoseUs/WhyChooseUs";
 import LogisticFeature from "./LogisticFeature";
+import FourCardsSame from "../FourCardsSame/FourCardsSame";
 
 function LogisticsLayout() {
 	const setItHardwareSoftwareBanner = {
@@ -19,7 +20,7 @@ function LogisticsLayout() {
 			/>
 			<div className="container mx-auto lg:py-24">
 				<LogisticFeature />
-				<StaffingSection />
+				<FourCardsSame />
 			</div>
 		</div>
 	);
