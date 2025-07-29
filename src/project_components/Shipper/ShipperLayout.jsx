@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 
 function ShipperLayout() {
 	const shipper = [
@@ -52,7 +54,88 @@ function ShipperLayout() {
 				"We coordinate efficiently with customers to ensure the smooth delivery and return of containers, resulting in cost savings and better customer satisfaction.",
 		},
 	];
-	return <div></div>;
+
+	return (
+		<div className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+			<div className="container mx-auto max-w-7xl">
+				{/* Grid layout matching the image */}
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{/* First row - 3 items */}
+					{shipper.slice(0, 3).map((item) => (
+						<Card
+							key={item.id}
+							className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+							<div className="relative h-48 overflow-hidden">
+								<Image
+									src={item.src}
+									alt={item.title}
+									fill
+									className="object-cover"
+									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+								/>
+							</div>
+							<CardContent className="p-6">
+								<h3 className="text-lg font-bold text-gray-800 mb-3 text-center">
+									{item.title}
+								</h3>
+								<p className="text-sm text-gray-600 leading-relaxed text-center">
+									{item.description}
+								</p>
+							</CardContent>
+						</Card>
+					))}
+
+					{/* Second row - 3 items */}
+					{shipper.slice(3, 6).map((item) => (
+						<Card
+							key={item.id}
+							className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+							<div className="relative h-48 overflow-hidden">
+								<Image
+									src={item.src}
+									alt={item.title}
+									fill
+									className="object-cover"
+									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+								/>
+							</div>
+							<CardContent className="p-6">
+								<h3 className="text-lg font-bold text-gray-800 mb-3 text-center">
+									{item.title}
+								</h3>
+								<p className="text-sm text-gray-600 leading-relaxed text-center">
+									{item.description}
+								</p>
+							</CardContent>
+						</Card>
+					))}
+
+					{/* Third row - 1 item centered */}
+					<div className="md:col-span-2 lg:col-span-3 flex justify-center">
+						<Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 w-full max-w-sm">
+							<div className="relative h-48 overflow-hidden">
+								<Image
+									src={shipper[6].src}
+									alt={shipper[6].title}
+									fill
+									className="object-cover"
+									sizes="(max-width: 768px) 100vw, 384px"
+								/>
+							</div>
+							<CardContent className="p-6">
+								<h3 className="text-lg font-bold text-gray-800 mb-3 text-center">
+									{shipper[6].title}
+								</h3>
+								<p className="text-sm text-gray-600 leading-relaxed text-center">
+									{shipper[6].description}
+								</p>
+							</CardContent>
+						</Card>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default ShipperLayout;
