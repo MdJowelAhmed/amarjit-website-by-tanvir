@@ -60,6 +60,13 @@ function NavBar() {
 					link: "/product-provisioning-services",
 					description: "Complete product delivery and provisioning solutions",
 				},
+				{
+					id: 3.3,
+					label: "Logistics Services",
+					link: "/logistics-services",
+					description:
+						"Reliable logistics and supply chain solutions to ensure timely delivery and operational efficiency",
+				},
 			],
 		},
 		{
@@ -74,8 +81,8 @@ function NavBar() {
 		},
 		{
 			id: 6,
-			label: "Industrial Services",
-			link: "/industrial-serve",
+			label: "Industries Served",
+			link: "/industries-served",
 		},
 		{
 			id: 7,

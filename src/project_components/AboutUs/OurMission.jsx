@@ -15,16 +15,15 @@ function OurMission() {
 								Our Mission
 							</h1>
 							<p className="text-gray-700 text-base sm:text-lg leading-relaxed text-justify">
-								Our mission is to bridge the critical gap between organizational
-								demand and timely, dependable delivery by providing a seamless
-								integration of qualified professionals, essential products, and
-								advanced technology solutions. We are driven by a commitment to
-								operational excellence, ensuring that every client engagement is
-								rooted in responsiveness, compliance, and measurable value.
-								Whether supporting high-stakes federal missions or enabling
-								growth for commercial enterprises, we deliver with purpose,
-								precision, and partnership — empowering our clients to perform
-								at their best.
+								Our mission is to close the gap between urgent organizational
+								needs and reliable delivery through the seamless integration of
+								skilled professionals, essential products, and cutting-edge
+								technology. We are driven by a commitment to operational
+								excellence—delivering solutions with responsiveness, compliance,
+								and measurable value. From high-stakes federal missions to
+								dynamic commercial ventures, we operate with purpose, precision,
+								and partnership—empowering our clients to achieve their highest
+								performance.
 							</p>
 						</div>
 						<div className="flex-shrink-0 order-1 lg:order-2">
@@ -48,16 +47,14 @@ function OurMission() {
 								Who We Are
 							</h1>
 							<p className="text-gray-700 text-base sm:text-lg leading-relaxed text-justify">
-								Founded with a vision to simplify how organizations source
-								talent and mission-critical products, we began our journey as a
-								small, agile team committed to solving big operational
-								challenges. Over the years, we’ve evolved into a trusted
-								provider for both government and commercial clients — delivering
-								workforce and procurement solutions that are fast, compliant,
-								and dependable. Our continued growth is fueled by our ability to
-								align with the unique demands of public sector contracting while
-								maintaining the flexibility and responsiveness required in
-								today’s dynamic marketplace.
+								We are a woman-owned business built to simplify how
+								organizations source talent, essential products, logistics, and
+								technology solutions. From our agile beginnings to becoming a
+								trusted partner to government and commercial clients, we deliver
+								fast, compliant, and dependable support. Our strength lies in
+								meeting the complex demands of public sector contracting while
+								staying responsive to the pace of modern business—all with a
+								focus on client success.
 							</p>
 						</div>
 						<div className="flex-shrink-0 order-1 lg:order-2">
