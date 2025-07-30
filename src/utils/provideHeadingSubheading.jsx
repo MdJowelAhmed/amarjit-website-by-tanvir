@@ -7,7 +7,7 @@ function HeadingSection({ icon, heading, subheading }) {
 			<h3 className="text-2xl sm:text-3xl leading-relaxed lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-6 text-gradient-heading  ">
 				{heading}
 			</h3>
-			<p className="text-base  sm:text-lg text-[#181818] max-w-3xl mx-auto">
+			<p className="text-base  sm:text-lg text-[#181818] max-w-3xl mx-auto w-full">
 				{subheading}
 			</p>
 		</div>
