@@ -107,7 +107,7 @@ function TransportInfoQuote() {
 										<Input
 											id="transportFrom"
 											placeholder="Zip Code"
-											className="bg-white border-gray-300 placeholder:text-gray-400"
+											className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
 											value={formData.transportFrom}
 											onChange={(e) =>
 												handleInputChange("transportFrom", e.target.value)
@@ -123,7 +123,7 @@ function TransportInfoQuote() {
 										<Input
 											id="transportTo"
 											placeholder="City or Zip Code"
-											className="bg-white border-gray-300 placeholder:text-gray-400 "
+											className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
 											value={formData.transportTo}
 											onChange={(e) =>
 												handleInputChange("transportTo", e.target.value)
@@ -166,7 +166,7 @@ function TransportInfoQuote() {
 										<Input
 											id="name"
 											placeholder="Name"
-											className="bg-white border-gray-300 placeholder:text-gray-400"
+											className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
 											value={formData.name}
 											onChange={(e) =>
 												handleInputChange("name", e.target.value)
@@ -182,7 +182,7 @@ function TransportInfoQuote() {
 										<Input
 											id="phone"
 											placeholder="+3540 5656"
-											className="bg-white border-gray-300 placeholder:text-gray-400"
+											className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
 											value={formData.phone}
 											onChange={(e) =>
 												handleInputChange("phone", e.target.value)
@@ -200,7 +200,7 @@ function TransportInfoQuote() {
 										id="email"
 										type="email"
 										placeholder="example.com"
-										className="bg-white border-gray-300 placeholder:text-gray-400"
+										className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
 										value={formData.email}
 										onChange={(e) => handleInputChange("email", e.target.value)}
 									/>
@@ -210,7 +210,7 @@ function TransportInfoQuote() {
 								<div className="pt-4">
 									<Button
 										onClick={handleSubmit}
-										className="w-full custom-btn hover:opacity-90 text-white font-semibold py-3">
+										className="w-full custom-btn hover:opacity-90 text-white font-semibold py-3 h-12">
 										Get A Quote
 									</Button>
 								</div>

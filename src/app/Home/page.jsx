@@ -5,26 +5,33 @@ import WhyChooseUs from "@/project_components/Home/whyChoseUs/WhyChooseUs";
 import React from "react";
 
 function Homepage() {
-  const setHomeBanner = {
-    src: "/Home/Home Image.jpg",
-    heading: "Delivering Talent and Technology — When and Where You Need It.",
-    subheading:
-      "End-to-end staffing and product solutions for government and commercial clients.",
-  };
-  return (
-    <div>
-      <Banner
-        src={setHomeBanner.src}
-        heading={setHomeBanner.heading}
-        subheading={setHomeBanner.subheading}
-      />
-
-      <CoreOfferings />
-      <WhyChooseUs />
-
-      <GetInTouch />
-    </div>
-  );
+	const setHomeBanner = {
+		src: "/Home/Home Image.jpg",
+		heading: "Delivering Talent and Technology — When and Where You Need It.",
+		subheading:
+			"End-to-end staffing and product solutions for government and commercial clients.",
+	};
+	return (
+		<div>
+			<Banner
+				src={setHomeBanner.src}
+				heading={setHomeBanner.heading}
+				subheading={setHomeBanner.subheading}
+			/>
+			<div
+				style={{
+					backgroundImage: "url('/bg.png')",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+					backgroundRepeat: "no-repeat",
+					minHeight: "100vh",
+				}}>
+				<CoreOfferings />
+				<WhyChooseUs />
+				<GetInTouch />
+			</div>
+		</div>
+	);
 }
 
 export default Homepage;

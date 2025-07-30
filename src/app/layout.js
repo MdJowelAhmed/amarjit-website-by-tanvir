@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					backgroundRepeat: "no-repeat",
-					minHeight: "100vh",
+					minHeight: "200vh",
 				}}>
 				<div>
 					{children}
