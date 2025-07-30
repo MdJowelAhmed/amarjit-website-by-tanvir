@@ -26,7 +26,7 @@ function AutoTransportFeature() {
 	];
 
 	return (
-		<div className="py-12 px-4  mx-auto bg-[#fafbfd] my-10">
+		<div className="py-12 px-4 max-w-7xl mx-auto my-5">
 			<div className="text-center">
 				<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-[#4f3075]">
 					Open Trailer Transport Services
