@@ -116,11 +116,11 @@ export function Footer() {
 						</div>
 
 						<div className="flex flex-col space-y-2 max-w-full">
-							<div className="footer-newsletter-gradient p-4 max-w-4/5 rounded-full flex gap-4">
+							<div className="footer-newsletter-gradient p-4 max-w-[20rem] rounded-full flex justify-between">
 								<Input
 									type="email"
 									placeholder="Your email"
-									className="border-none focus:border-none shadow-none max-w-64 placeholder:text-blue-950"
+									className="border-none focus:border-none shadow-none h-9 text-black max-w-64 placeholder:text-blue-950"
 								/>
 								<Button className="gardient-style max-w-20 rounded-full">
 									Sign Up
@@ -134,16 +134,16 @@ export function Footer() {
 				<div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 					<p className="text-sm">© 2024 example.com. All rights reserved.</p>
 					<div className="flex gap-4">
-						<a
+						<Link
 							href="#"
-							className="text-sm hover:text-primary transition-colors">
+							className="text-sm hover:scale-105 transition-colors">
 							Terms & Conditions
-						</a>
-						<a
+						</Link>
+						<Link
 							href="#"
-							className="text-sm hover:text-primary transition-colors">
+							className="text-sm hover:scale-105 transition-colors">
 							Privacy Notice
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
