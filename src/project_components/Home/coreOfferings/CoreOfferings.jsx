@@ -166,7 +166,7 @@ const CoreOfferings = () => {
 											<CardTitle className=" text-xl sm:text-2xl font-bold text-[#181818] mb-3 group-hover:text-[#181818] transition-colors">
 												{item.title}
 											</CardTitle>
-											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed">
+											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed min-w-[85%]">
 												{item.description}
 											</CardDescription>
 										</CardHeader>
