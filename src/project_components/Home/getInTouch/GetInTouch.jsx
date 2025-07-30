@@ -56,7 +56,7 @@ function GetInTouch() {
 			id: 2,
 			icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#4f3075]" />,
 			label: "E-mail",
-			content: "example@gmail.com",
+			content: "support@kfbusa.com",
 		},
 
 		{
@@ -65,14 +65,14 @@ function GetInTouch() {
 				<LiaPhoneVolumeSolid className="w-4 h-4 sm:w-5 sm:h-5 text-[#4f3075]" />
 			),
 			label: "Contact",
-			content: "examplelinkedin.com",
+			content: "513-966-9567",
 		},
 	];
 
 	return (
-		<div className="get-in-touch-card flex flex-col lg:flex-row items-start gap-8 lg:gap-12 xl:gap-20 max-w-[90rem] mx-auto mt-8 sm:mt-12 mb-12 sm:mb-24 px-4 sm:px-8 md:px-12 lg:px-14 py-6 sm:py-8 md:py-10">
+		<div className="border-2 border-[#4f3075] rounded-xl flex flex-col lg:flex-row items-start gap-8 lg:gap-10 xl:gap-20 max-w-[90rem] mx-auto mt-8 sm:mt-12 mb-12 sm:mb-24 px-4 sm:px-8 md:px-12 lg:px-14 py-6 sm:py-8 md:py-10">
 			{/* Left Column - Contact Info */}
-			<div className="w-full lg:w-1/3 h-full flex flex-col items-start">
+			<div className="w-full lg:w-full h-full flex flex-col items-start ">
 				<h1 className="text-2xl text-gradient-heading sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug lg:leading-normal gradient-h1">
 					Engage with Us
 				</h1>
@@ -99,7 +99,7 @@ function GetInTouch() {
 			</div>
 
 			{/* Right Column - Contact Form */}
-			<div className="w-full lg:w-2/3 pt-0 sm:pt-3">
+			<div className="w-full lg:w-[130rem] pt-0 sm:pt-3 ">
 				<div className="text-start pb-4 sm:pb-6">
 					<CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">
 						GET IN TOUCH

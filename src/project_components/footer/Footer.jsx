@@ -18,9 +18,16 @@ export function Footer() {
 						<h3 className="text-lg font-semibold text-white dark:text-gray-200">
 							Quick Links
 						</h3>
-						<div className="flex gap-4">
+						<div className="flex gap-10 ">
 							<div>
 								<ul className="space-y-1">
+									<li>
+										<Link
+											href="/"
+											className="hover:text-white/70 transition-colors">
+											Home
+										</Link>
+									</li>
 									<li>
 										<Link
 											href="/product-provisioning-services"
@@ -55,16 +62,16 @@ export function Footer() {
 									</li>
 									<li>
 										<Link
-											href="/industrial-serve"
+											href="/industries-served"
 											className="hover:text-white/70 transition-colors">
-											Industrial Serve
+											Industries Served
 										</Link>
 									</li>
 									<li>
 										<Link
-											href="#"
+											href="/certification"
 											className="hover:text-white/70 transition-colors">
-											Featured Clients
+											Certifications
 										</Link>
 									</li>
 								</ul>
@@ -78,14 +85,21 @@ export function Footer() {
 							Our Contact
 						</h3>
 						<div className="flex flex-col space-y-3">
-							<p className="leading-6">
-								Email: <br />
-								<span className="font-bold">example@gmail.com</span>
+							<p className="leading-6 font-light text-xs">
+								HEADQUARTER <br />
+								<span className="font-bold text-base">
+									5356 Elmwood Lane, Liberty Township, <br />
+									OH - 45044
+								</span>
+							</p>
+							<p className="leading-6 font-light text-xs">
+								E-mail: <br />
+								<span className="font-bold text-base">support@kfbusa.com</span>
 							</p>
 
-							<p className="leading-6">
-								LinkedIn <br />
-								<span className="font-bold">examplelinkedin.com</span>
+							<p className="leading-6 font-light text-xs">
+								Phone: <br />
+								<span className="font-bold text-base">513-966-9567</span>
 							</p>
 						</div>
 					</div>

@@ -5,7 +5,7 @@ function NAICSTable() {
 		return (
 			<section>
 				<HeadingSection
-					heading="NAICS Codes & DUNS/CAGE"
+					heading="NAICS Codes"
 					subheading="We maintain all required business identifiers to ensure full alignment with federal and commercial procurement standards."
 				/>
 			</section>

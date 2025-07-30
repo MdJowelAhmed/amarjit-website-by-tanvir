@@ -85,7 +85,7 @@ function TransportInfoQuote() {
 
 				{/* Right Column - Quote Form */}
 				<div className="">
-					<Card className="footer-newsletter-gradient border-none shadow-lg rounded">
+					<Card className="footer-newsletter-gradient border-none  rounded">
 						<CardHeader className="text-center pb-4">
 							<CardTitle className="text-2xl md:text-3xl font-bold text-gradient-heading">
 								Get an Instant Quote
