@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Home/banner/Banner";
 import StaffServices from "./StaffServices";
 import EngageMentModel from "./EngageMentModel";
+import OurServices from "./OurServices";
 
 function StaffAugmentationLayout() {
 	const setServiceBanner = {
@@ -18,6 +19,7 @@ function StaffAugmentationLayout() {
 				subheading={setServiceBanner.subheading}
 			/>
 			<div className="py-12 lg:py-24 flex flex-col gap-20">
+				<OurServices />
 				<StaffServices />
 				<EngageMentModel />
 			</div>

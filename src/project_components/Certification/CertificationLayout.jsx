@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Home/banner/Banner";
 import GSATable from "./GSATable";
 import SocioEconomic from "./SocioEconomic";
+import NAICSTable from "./GSATable";
 
 function CertificationLayout() {
 	const setCertifcationBanner = {
@@ -17,7 +18,7 @@ function CertificationLayout() {
 				heading={setCertifcationBanner.heading}
 				subheading={setCertifcationBanner.subheading}
 			/>
-			<GSATable />
+			<NAICSTable />
 			<SocioEconomic />
 		</div>
 	);
