@@ -53,7 +53,7 @@ const CoreOfferings = () => {
 			title: "Office Supplies & Equipment",
 			link: "office-supplies-equipment",
 			description: "Innovative engineering and technical solutions.",
-			image: "/Home/office_supplies.png",
+			image: "/Home/office_supply.jpg",
 			alt: "Engineering professional working on technical solutions",
 		},
 		{

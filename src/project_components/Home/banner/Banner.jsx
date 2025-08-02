@@ -124,10 +124,10 @@ function Banner({ src, heading, subheading }) {
 					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-4 sm:mb-6 drop-shadow-lg">
 						<Typewriter
 							words={[heading]}
-							loop={Infinity}
+							loop={1}
 							cursor
-							cursorStyle="|"
-							typeSpeed={120}
+							cursorStyle=""
+							typeSpeed={60}
 							deleteSpeed={70}
 							delaySpeed={2000}
 						/>
