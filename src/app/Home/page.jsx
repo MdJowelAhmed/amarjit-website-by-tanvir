@@ -19,13 +19,16 @@ function Homepage() {
 				subheading={setHomeBanner.subheading}
 			/>
 			<div
-				style={{
-					backgroundImage: "url('/bg.png')",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-					backgroundRepeat: "no-repeat",
-					minHeight: "100vh",
-				}}>
+				style={
+					{
+						// backgroundImage: "url('/bg_2.png')",
+						// backgroundSize: "cover",
+						// backgroundPosition: "center",
+						// backgroundRepeat: "no-repeat",
+						// // minHeight: "100vh",
+						// paddingTop: "0px",
+					}
+				}>
 				<CoreOfferings />
 				<WhyChooseUs />
 				<GetInTouch />

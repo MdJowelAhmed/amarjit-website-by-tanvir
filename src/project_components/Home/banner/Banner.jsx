@@ -14,7 +14,7 @@ function Banner({ src, heading, subheading }) {
 	const routeConfig = useMemo(() => {
 		const routes = {
 			isHome: path === "/",
-			isIndustryServe: path === "/industrial-serve",
+			isIndustryServe: path === "/industries-served",
 			isCertification: path === "/certification",
 			isBlog: path === "/blog",
 			isDynamicBlog: path.includes("/blog/"),
@@ -55,7 +55,21 @@ function Banner({ src, heading, subheading }) {
 			routes.isAutoTransport,
 		].some(Boolean);
 
-		return { ...routes, showSubheading };
+		// Overlay opacity configuration for different routes
+		const getOverlayOpacity = () => {
+			if (routes.isCertification) return "bg-black/50";
+			if (routes.isBlog || routes.isDynamicBlog) return "bg-black/40";
+			if (routes.isContact) return "bg-black/35";
+			if (routes.isStaffAugment) return "bg-black/30";
+			if (routes.isProvision || routes.isAutoTransport) return "bg-black/25";
+			if (routes.isIndustryServe) return "bg-black/50";
+			if (routes.isShipper || routes.isCarrier) return "bg-black/20";
+
+			// Default opacity for other routes
+			return "bg-black/10";
+		};
+
+		return { ...routes, showSubheading, overlayOpacity: getOverlayOpacity() };
 	}, [path]);
 
 	// Memoize container classes
@@ -115,7 +129,7 @@ function Banner({ src, heading, subheading }) {
 			</div>
 
 			{/* Overlay */}
-			<div className="absolute inset-0 bg-black/10" />
+			<div className={`absolute inset-0 ${routeConfig.overlayOpacity}`} />
 
 			{/* Content */}
 			<main className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">

@@ -18,6 +18,7 @@ function StaffAugmentationLayout() {
 				heading={setServiceBanner.heading}
 				subheading={setServiceBanner.subheading}
 			/>
+
 			<div className="py-12 lg:py-24 flex flex-col gap-20">
 				<OurServices />
 				<StaffServices />

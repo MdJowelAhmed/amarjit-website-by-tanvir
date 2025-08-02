@@ -69,11 +69,11 @@ function NavBar() {
 				},
 			],
 		},
-		{
-			id: 4,
-			label: "Blog",
-			link: "/blog",
-		},
+		// {
+		// 	id: 4,
+		// 	label: "Blog",
+		// 	link: "/blog",
+		// },
 		{
 			id: 5,
 			label: "Certification",
@@ -99,6 +99,8 @@ function NavBar() {
 		return pathname.startsWith(link);
 	};
 
+	const isCertificate = pathname === "/certification";
+
 	const handleLinkClick = () => {
 		setIsDrawerOpen(false);
 		setIsServiceOpen(false);
@@ -108,7 +110,9 @@ function NavBar() {
 		<nav className="flex items-center justify-between px-4 md:px-8 py-4 bg-transparent">
 			<div className="flex-shrink-0">
 				<Link href="/" className="text-white text-xl font-bold">
-					{provideIcon({ name: "company_logo" })}
+					{isCertificate
+						? provideIcon({ name: "company_logo_2" })
+						: provideIcon({ name: "company_logo" })}
 				</Link>
 			</div>
 

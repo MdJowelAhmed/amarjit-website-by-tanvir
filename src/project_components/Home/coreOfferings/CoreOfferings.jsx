@@ -166,13 +166,18 @@ const CoreOfferings = () => {
 							{staffingSolutions.map((solution) => (
 								<Link href={solution.link} key={solution.id}>
 									<Card className="h-[30rem] group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-										{/* Solid color overlay that grows from top on hover */}
-										<div className="absolute left-0 top-0 w-full h-0 group-hover:h-full bg-[#bbbbfa] transition-all duration-500 z-10 pointer-events-none"></div>
+										{/* Gradient overlay that grows from top on hover */}
+										<div
+											className="absolute left-0 top-0 w-full h-0 group-hover:h-full transition-all duration-500 z-10 pointer-events-none"
+											style={{
+												background:
+													"linear-gradient(90deg, #2c2d70 0%, #512c7b 47.12%)",
+											}}></div>
 										<CardHeader className="mt-5 text-center relative z-20">
-											<CardTitle className=" text-xl sm:text-2xl font-bold text-[#181818] mb-3 group-hover:text-[#181818] transition-colors">
+											<CardTitle className=" text-xl sm:text-2xl font-bold text-[#181818] mb-3 group-hover:text-white transition-colors">
 												{solution.title}
 											</CardTitle>
-											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed">
+											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed group-hover:text-white transition-colors">
 												{solution.description}
 											</CardDescription>
 										</CardHeader>
@@ -206,13 +211,18 @@ const CoreOfferings = () => {
 							{productProvisioning.map((item) => (
 								<Link href={item.link} key={item.id}>
 									<Card className=" h-[30rem] group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-										{/* Solid color overlay that grows from top on hover */}
-										<div className="absolute left-0 top-0 w-full h-0 group-hover:h-full bg-[#bbbbfa] transition-all duration-500 z-10 pointer-events-none"></div>
+										{/* Gradient overlay that grows from top on hover */}
+										<div
+											className="absolute left-0 top-0 w-full h-0 group-hover:h-full transition-all duration-500 z-10 pointer-events-none"
+											style={{
+												background:
+													"linear-gradient(90deg, #2c2d70 0%, #512c7b 47.12%)",
+											}}></div>
 										<CardHeader className="mt-5 text-center relative z-20">
-											<CardTitle className=" text-xl sm:text-2xl font-bold text-[#181818] mb-3 group-hover:text-[#181818] transition-colors">
+											<CardTitle className=" text-xl sm:text-2xl font-bold text-[#181818] mb-3 group-hover:text-white transition-colors">
 												{item.title}
 											</CardTitle>
-											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed min-w-[85%]">
+											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed min-w-[85%] group-hover:text-white transition-colors">
 												{item.description}
 											</CardDescription>
 										</CardHeader>
@@ -257,13 +267,18 @@ const CoreOfferings = () => {
 							{shippers.map((item) => (
 								<div key={item.id}>
 									<Card className=" h-[30rem] group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-										{/* Solid color overlay that grows from top on hover */}
-										<div className="absolute left-0 top-0 w-full h-0 group-hover:h-full bg-[#bbbbfa] transition-all duration-500 z-10 pointer-events-none"></div>
+										{/* Gradient overlay that grows from top on hover */}
+										<div
+											className="absolute left-0 top-0 w-full h-0 group-hover:h-full transition-all duration-500 z-10 pointer-events-none"
+											style={{
+												background:
+													"linear-gradient(90deg, #2c2d70 0%, #512c7b 47.12%)",
+											}}></div>
 										<CardHeader className="mt-5 text-center relative z-20">
-											<CardTitle className=" text-xl sm:text-2xl font-bold text-[#181818] mb-3 group-hover:text-[#181818] transition-colors">
+											<CardTitle className=" text-xl sm:text-2xl font-bold text-[#181818] mb-3 group-hover:text-white transition-colors">
 												{item.title}
 											</CardTitle>
-											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed min-w-[85%]">
+											<CardDescription className=" max-w-60 mx-auto text-[#181818] text-sm sm:text-base leading-relaxed min-w-[85%] group-hover:text-white transition-colors">
 												{item.description}
 											</CardDescription>
 										</CardHeader>

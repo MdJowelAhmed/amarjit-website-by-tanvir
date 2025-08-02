@@ -53,13 +53,13 @@ export function Footer() {
 							</div>
 							<div>
 								<ul className="space-y-1">
-									<li>
+									{/* <li>
 										<Link
 											href="/blog"
 											className="hover:text-white/70 transition-colors">
 											Blog
 										</Link>
-									</li>
+									</li> */}
 									<li>
 										<Link
 											href="/industries-served"

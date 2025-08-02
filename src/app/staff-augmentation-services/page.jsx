@@ -2,11 +2,11 @@ import StaffAugmentationLayout from "@/project_components/StaffAugmentation/Staf
 import React from "react";
 
 function page() {
-  return (
-    <>
-      <StaffAugmentationLayout />
-    </>
-  );
+	return (
+		<>
+			<StaffAugmentationLayout />
+		</>
+	);
 }
 
 export default page;
