@@ -6,7 +6,7 @@ import React from "react";
 
 function Homepage() {
 	const setHomeBanner = {
-		src: "/Home/Home Image.jpg",
+		src: "/Home/home.png",
 		heading: "Delivering Talent and Technology — When and Where You Need It.",
 		subheading:
 			"End-to-end staffing and product solutions for government and commercial clients.",

@@ -87,9 +87,9 @@ function Banner({ src, heading, subheading }) {
 			<div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
 				<Link href="/contact-us">
 					<Button
-						className="w-full sm:w-auto sm:max-w-60 h-10 sm:h-12 rounded-full 
+						className="min-w-60 sm:w-auto sm:max-w-60 h-10 sm:h-12 rounded-full 
     border-2 border-white text-white px-4 sm:px-6 py-2 text-sm sm:text-base 
-    bg-white/15 backdrop-blur-xs shadow-md transition-all duration-200 
+    bg-white/20 backdrop-blur-xs shadow-md transition-all duration-200 
     hover:bg-white hover:text-black">
 						Get a Free Consultation
 					</Button>
@@ -97,9 +97,9 @@ function Banner({ src, heading, subheading }) {
 
 				<Link href="/product-provisioning-services">
 					<Button
-						className="w-full sm:w-auto sm:max-w-60 h-10 sm:h-12 rounded-full 
+						className="min-w-60 sm:w-auto sm:max-w-60 h-10 sm:h-12 rounded-full 
     border-2 border-white text-white px-4 sm:px-6 py-2 text-sm sm:text-base 
-    bg-white/15 backdrop-blur-xs shadow-md transition-all duration-200 
+    bg-white/20 backdrop-blur-xs shadow-md transition-all duration-200 
     hover:bg-white hover:text-black">
 						Explore Services
 					</Button>
