@@ -18,16 +18,14 @@ function IndustrialServices() {
 				subheading={setIndustrialBanner.subheading}
 			/>
 			<div className="relative overflow-hidden">
-				<div className="hidden lg:block">
-					<Image
-						src={"/left_img.png"}
-						width={500}
-						height={500}
-						className="absolute top-52 left-0 xl:left-[0rem] scale-100 xl:scale-150"
-						alt="bg-image"
-					/>
-					<IndustrialSector />
-				</div>
+				<Image
+					src={"/left_img.png"}
+					width={500}
+					height={500}
+					className="absolute top-52 left-0 xl:left-[0rem] scale-100 xl:scale-150"
+					alt="bg-image"
+				/>
+				<IndustrialSector />
 			</div>
 		</div>
 	);

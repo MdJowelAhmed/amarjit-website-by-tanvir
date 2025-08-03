@@ -62,7 +62,13 @@ function Banner({ src, heading, subheading }) {
 			if (routes.isContact) return "bg-black/35";
 			if (routes.isStaffAugment) return "bg-black/30";
 			if (routes.isProvision || routes.isAutoTransport) return "bg-black/25";
-			if (routes.isIndustryServe) return "bg-black/50";
+			if (
+				routes.isIndustryServe ||
+				routes.isLogistic ||
+				routes.isOfficeEquipment ||
+				routes.isIndustrialSafetyGear
+			)
+				return "bg-black/50";
 			if (routes.isShipper || routes.isCarrier) return "bg-black/20";
 
 			// Default opacity for other routes

@@ -33,7 +33,7 @@ function FourCardsSame() {
 	];
 
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
 			{features.map((feature, index) => (
 				<Card key={index} className="border-2 border-[#4f3075] h-full">
 					<CardContent className="p-6 flex flex-col items-center text-center h-full">
