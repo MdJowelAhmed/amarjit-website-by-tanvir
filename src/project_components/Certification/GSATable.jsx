@@ -92,7 +92,7 @@ function NAICSTable() {
 	);
 
 	return (
-		<div className="max-w-5xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white">
+		<div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white">
 			{/* Header Section */}
 			<div className="text-center mb-10">{naicsHeading()}</div>
 

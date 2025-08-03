@@ -67,7 +67,7 @@ export function StaffingSection() {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 			{features.map((feature, index) => (
-				<Card key={index} className="get-in-touch-card h-full">
+				<Card key={index} className=" h-full">
 					<CardContent className="p-6 flex flex-col items-center text-center h-full">
 						{/* Icon */}
 						<div className="mb-4 flex-shrink-0 ">{feature.icon}</div>

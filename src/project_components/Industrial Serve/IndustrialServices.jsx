@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../Home/banner/Banner";
 import IndustrialSector from "./IndustrialSector";
+import Image from "next/image";
 
 function IndustrialServices() {
 	const setIndustrialBanner = {
@@ -16,7 +17,18 @@ function IndustrialServices() {
 				heading={setIndustrialBanner.heading}
 				subheading={setIndustrialBanner.subheading}
 			/>
-			<IndustrialSector />
+			<div className="relative overflow-hidden">
+				<div className="hidden lg:block">
+					<Image
+						src={"/left_img.png"}
+						width={500}
+						height={500}
+						className="absolute top-52 left-0 xl:left-[0rem] scale-100 xl:scale-150"
+						alt="bg-image"
+					/>
+					<IndustrialSector />
+				</div>
+			</div>
 		</div>
 	);
 }
