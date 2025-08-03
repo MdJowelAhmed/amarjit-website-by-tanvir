@@ -62,7 +62,7 @@ function SocioEconomic() {
 						<Dialog>
 							<DialogTrigger
 								asChild
-								className="md:max-w-36 cursor-pointer hover:opacity-80 transition-opacity"
+								className="md:max-w-36 cursor-pointer hover:opacity-80 transition-opacity z-10"
 								onClick={() => setSelectedCertificate(item)}>
 								{provideIcon({ name: "certificate" })}
 							</DialogTrigger>

@@ -6,7 +6,7 @@ import Image from "next/image";
 function IndustrialServices() {
 	const setIndustrialBanner = {
 		src: "/Industry/industrial_serve.jpg",
-		heading: "Industries We Serve",
+		heading: "Industries Served",
 		subheading:
 			"We support mission-critical operations across public and private sectors — delivering tailored staffing, technology, and product solutions where they’re needed most.",
 	};

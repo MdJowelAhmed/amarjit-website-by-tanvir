@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Home/banner/Banner";
 import AutoTransportFeature from "./AutoTransportFeature";
 import TransportInfoQuote from "./TransportInfoQuote";
+import Image from "next/image";
 
 function AutoTransportServiceLayout() {
 	const setAutoTransportBanner = {
@@ -17,23 +18,40 @@ function AutoTransportServiceLayout() {
 				heading={setAutoTransportBanner.heading}
 				subheading={setAutoTransportBanner.subheading}
 			/>
-			<div className="py-8 lg:py-20">
-				<div>
-					<h1 className="text-gradient-heading text-2xl sm:text-3xl leading-relaxed lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-6 text-center">
-						What Is Open Trailer Car Transport?
-					</h1>
-					<p className="text-base  sm:text-lg text-[#181818] max-w-7xl mx-auto text-center">
-						Open trailer car transport is a method of transporting vehicles
-						using an open-air trailer. Unlike enclosed transport, open trailers
-						expose vehicles to the elements during transit. This method is
-						commonly used for standard vehicles and is often more cost-effective
-						than enclosed transport. While vehicles may be exposed to weather
-						conditions and road debris, open trailer transport is generally safe
-						and efficient for short to medium-distance transportation needs.
-					</p>
+			<div className="relative overflow-hidden">
+				<Image
+					src={"/left_img.png"}
+					width={500}
+					height={500}
+					className="absolute top-10 left-0 xl:left-[0rem] scale-100 xl:scale-110 -z-10"
+					alt="bg-image"
+				/>
+				<Image
+					src={"/right_img.png"}
+					width={500}
+					height={500}
+					className="absolute -bottom-[5rem] right-0 xl:right-[0rem] scale-100 xl:scale-110 -z-10"
+					alt="bg-image"
+				/>
+				<div className="py-8 lg:py-20">
+					<div>
+						<h1 className="text-gradient-heading text-2xl sm:text-3xl leading-relaxed lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-6 text-center">
+							What Is Open Trailer Car Transport?
+						</h1>
+						<p className="text-base  sm:text-lg text-[#181818] max-w-7xl mx-auto text-center">
+							Open trailer car transport is a method of transporting vehicles
+							using an open-air trailer. Unlike enclosed transport, open
+							trailers expose vehicles to the elements during transit. This
+							method is commonly used for standard vehicles and is often more
+							cost-effective than enclosed transport. While vehicles may be
+							exposed to weather conditions and road debris, open trailer
+							transport is generally safe and efficient for short to
+							medium-distance transportation needs.
+						</p>
+					</div>
+					<AutoTransportFeature />
+					<TransportInfoQuote />
 				</div>
-				<AutoTransportFeature />
-				<TransportInfoQuote />
 			</div>
 		</div>
 	);

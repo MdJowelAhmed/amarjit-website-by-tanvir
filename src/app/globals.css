@@ -124,12 +124,13 @@
 .get-in-touch-card {
 	border-radius: 8px;
 	border: 2px solid var(--Foundation-Grey-Light, #f2f2f2);
-	background: rgba(255, 255, 255, 0.05);
+	/* background: rgba(255, 255, 255, 0.05); */
+	background: transparent;
 	/* box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.3) inset,
 		-1px -3px 2px 0px rgba(255, 255, 255, 0.1) inset,
 		1px 3px 2px 0px rgba(255, 255, 255, 0.3) inset,
 		0px 26px 36px 0px rgba(0, 0, 0, 0.25); */
-	backdrop-filter: blur(6px);
+	/* backdrop-filter: blur(6px); */
 }
 
 .footer-glass {

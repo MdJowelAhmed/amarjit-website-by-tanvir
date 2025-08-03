@@ -103,7 +103,7 @@ function EngageMentModel() {
 								<DialogTrigger asChild>
 									<Button
 										type="button"
-										className="bg-transparent border border-[#4f3075] rounded shadow-none h-10 text-[#4f3075] hover:bg-transparent hover:scale-105 flex items-center justify-center gap-2 transition-colors duration-200">
+										className="bg-transparent border border-[#4f3075] rounded shadow-none h-10 text-[#4f3075] hover:bg-transparent hover:scale-105 flex items-center justify-center gap-2 transition-colors duration-200 z-10">
 										Read More <LuMoveRight className="w-4 h-4" />
 									</Button>
 								</DialogTrigger>

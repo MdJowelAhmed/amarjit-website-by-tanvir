@@ -7,6 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import TableLayout from "./ServiceLayout.jsx/TableLayout";
 import { Button } from "@/components/ui/button";
 import { LuMoveRight } from "react-icons/lu";
+import Image from "next/image";
 
 function ServiceDynamicPageLayout() {
 	const path = usePathname();
@@ -36,18 +37,27 @@ function ServiceDynamicPageLayout() {
 				heading={setServiceBanner.heading}
 				subheading={setServiceBanner.subheading}
 			/>
+			<div className="relative overflow-hidden">
+				<Image
+					src={"/left_img.png"}
+					width={500}
+					height={500}
+					className="absolute top-32 left-0 xl:left-[0rem] scale-100 xl:scale-130"
+					alt="bg-image"
+				/>
 
-			{isGCA && <GCA />}
-			{isLocalPuchasing && <LocalPurchasing />}
-			{isCooperativePurchasing && <CooperativePurchasing />}
-			{isVendor && <VendorSourcing />}
-			<div className="container mx-auto flex items-center justify-center px-4 sm:px-6 lg:px-8">
-				<Button
-					onClick={handleBack}
-					className="w-40 h-10 rounded-sm bg-transparent border-2 text-black hover:scale-105 hover:bg-transparent -mt-16 sm:-mt-20 lg:-mt-20 mb-6 sm:mb-8 lg:mb-12 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base flex items-center gap-4">
-					<LuMoveRight className="w-4 h-4 rotate-180" />
-					Back
-				</Button>
+				{isGCA && <GCA />}
+				{isLocalPuchasing && <LocalPurchasing />}
+				{isCooperativePurchasing && <CooperativePurchasing />}
+				{isVendor && <VendorSourcing />}
+				<div className="container mx-auto flex items-center justify-center px-4 sm:px-6 lg:px-8">
+					<Button
+						onClick={handleBack}
+						className="w-40 h-10 rounded-sm bg-transparent border-2 text-black hover:scale-105 hover:bg-transparent -mt-16 sm:-mt-20 lg:-mt-20 mb-6 sm:mb-8 lg:mb-12 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base flex items-center gap-4">
+						<LuMoveRight className="w-4 h-4 rotate-180" />
+						Back
+					</Button>
+				</div>
 			</div>
 		</div>
 	);

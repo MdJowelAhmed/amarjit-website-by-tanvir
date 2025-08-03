@@ -59,14 +59,18 @@ function Banner({ src, heading, subheading }) {
 		const getOverlayOpacity = () => {
 			if (routes.isCertification) return "bg-black/50";
 			if (routes.isBlog || routes.isDynamicBlog) return "bg-black/40";
-			if (routes.isContact) return "bg-black/35";
-			if (routes.isStaffAugment) return "bg-black/30";
+
+			if (routes.isStaffAugment || routes.isItAndCyberSecurity)
+				return "bg-black/30";
 			if (routes.isProvision || routes.isAutoTransport) return "bg-black/25";
 			if (
 				routes.isIndustryServe ||
 				routes.isLogistic ||
 				routes.isOfficeEquipment ||
-				routes.isIndustrialSafetyGear
+				routes.isIndustrialSafetyGear ||
+				routes.isEngineeringAndTechnical ||
+				routes.isHealthCareAdminFinance ||
+				routes.isContact
 			)
 				return "bg-black/50";
 			if (routes.isShipper || routes.isCarrier) return "bg-black/20";

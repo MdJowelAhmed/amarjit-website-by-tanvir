@@ -132,8 +132,10 @@ export function Footer() {
 
 				{/* Bottom section */}
 				<div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-					<p className="text-sm">© 2024 example.com. All rights reserved.</p>
-					<div className="flex gap-4">
+					<p className="text-sm">
+						© {new Date().getFullYear()} example.com. All rights reserved.
+					</p>
+					{/* <div className="flex gap-4">
 						<Link
 							href="#"
 							className="text-sm hover:scale-105 transition-colors">
@@ -144,7 +146,7 @@ export function Footer() {
 							className="text-sm hover:scale-105 transition-colors">
 							Privacy Notice
 						</Link>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>
