@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function ContactUsLayout() {
 	const setContactUsBanner = {
-		src: "/Contact US/contact_us.jpg",
+		src: "/Contact Us/contact_us.png",
 		heading: "Contact Us",
 		subheading:
 			"Get in Touch — We’re Here to Help Whether you're looking for IT solutions, staffing support, or have questions about our services, our team is ready to assist you.",
