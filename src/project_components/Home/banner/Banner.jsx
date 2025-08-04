@@ -60,7 +60,7 @@ function Banner({ src, heading, subheading }) {
 			if (routes.isCertification) return "bg-black/50";
 			if (routes.isBlog || routes.isDynamicBlog) return "bg-black/40";
 
-			if (routes.isStaffAugment || routes.isItAndCyberSecurity)
+			if (routes.isStaffAugment || routes.isItAndCyberSecurity || routes.isHome)
 				return "bg-black/30";
 			if (routes.isProvision || routes.isAutoTransport) return "bg-black/25";
 			if (

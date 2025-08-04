@@ -5,36 +5,36 @@ import Image from "next/image";
 function LeadershipTeam() {
 	const teamMembers = [
 		{
-			name: "Jane Doe",
-			title: "Chief Executive Officer",
+			name: "Neeraj Joshi",
+			title: "Chief Executive officer, Chairman",
 			src: "/AboutUs/leader_1.png",
-			alt: "leader_1",
+			alt: "chairman",
 			description:
-				" A visionary leader and certified 8(a)/WOSB business owner, Jane has over 20 years of experience in federal contracting and workforce solutions. She leads strategic growth",
+				" Neeraj Joshi brings deep expertise in scaling small businesses through strategic execution and operational excellence. Specializes in navigating and expanding government contract opportunities to drive sustainable growth.",
 		},
 		{
-			name: "John Smith",
-			title: "Chief Operating Officer",
+			name: "Amarjit Kaur",
+			title: "Chief Finance Officer",
 			src: "/AboutUs/leader_2.png",
 			alt: "leader_2",
 			description:
-				" John manages daily operations, delivery timelines, and large-scale client programs across multiple industries. His background in IT services, logistics, and contract fulfillment ensures smooth execution from intake to implementation.",
+				"Amarjit brings strategic and hands-on experience specializing in small business growth, financial planning, and cash flow management. Skilled in streamlining operations, guiding strategic decisions, and building strong financial foundations for long-term success.",
 		},
 		{
-			name: "Maria Chen",
-			title: "Chief Technology Officer",
-			src: "/AboutUs/leader_3.png",
+			name: "Anuradha Bhardwaj",
+			title: "Chief Operating Office",
+			src: "/AboutUs/anuradha_vardwaj.png",
 			alt: "leader_3",
 			description:
-				" John manages daily operations, delivery timelines, and large-scale client programs across multiple industries. His background in IT services, logistics, and contract fulfillment ensures smooth execution from intake to implementation.",
+				"Anuradha Bhardwaj is a seasoned entrepreneur and operations expert, She specializes in talent acquisition, organizational growth, and workforce strategy. With a strong track record of scaling teams and leading recruitment initiatives, she brings both strategic insight and executional excellence to fast-growing businesses.",
 		},
 		{
-			name: "Steve Mark",
-			title: "Chief Financial Officer",
+			name: "Vikram Sharma",
+			title: "Chief Client Office",
 			src: "/AboutUs/leader_4.png",
 			alt: "leader_4",
 			description:
-				" John manages daily operations, delivery timelines, and large-scale client programs across multiple industries. His background in IT services, logistics, and contract fulfillment ensures smooth execution from intake to implementation.",
+				"Vikram leading client engagement and strategic growth initiatives. With deep experience in public sector solutions, he ensures government partners receive tailored, compliant, and impactful services that drive long-term value.",
 		},
 	];
 
