@@ -29,7 +29,7 @@ function CarrierLayout() {
 					src={"/right_img.png"}
 					width={500}
 					height={500}
-					className="absolute -bottom-[15rem] right-0 scale-170 -z-10"
+					className="absolute -bottom-[30rem] right-0 scale-170 -z-10"
 					alt="bg-image"
 				/>
 				<CarriersFeature />
