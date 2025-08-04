@@ -23,14 +23,14 @@ function ProductProvisionLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-64 left-0 scale-170"
+					className="hidden lg:block absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:top-56 md:left-28 2xl:left-18 scale-170"
 					alt="bg-image"
 				/>
 				<Image
 					src={"/right_img.png"}
 					width={500}
 					height={500}
-					className="absolute -bottom-[35rem] right-0 scale-170"
+					className="hidden lg:block absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:-bottom-[15rem] 2xl:-bottom-[24rem] md:right-5 2xl:right-12 scale-170"
 					alt="bg-image"
 				/>
 

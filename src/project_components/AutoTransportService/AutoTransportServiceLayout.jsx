@@ -23,14 +23,14 @@ function AutoTransportServiceLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-64 left-0 scale-170 -z-10"
+					className="hidden lg:block absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:top-[10rem] 2xl:top-[14rem] md:left-5 2xl:left-12 md:scale-160 2xl:scale-170 -z-10"
 					alt="bg-image"
 				/>
 				<Image
 					src={"/right_img.png"}
 					width={500}
 					height={500}
-					className="absolute -bottom-[20rem] right-0 scale-170 -z-10"
+					className="hidden lg:block absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:bottom-[5rem] 2xl:-bottom-[4rem] md:right-5 2xl:right-12 md:scale-160 2xl:scale-170 -z-10"
 					alt="bg-image"
 				/>
 				<div className="py-8 lg:py-20">

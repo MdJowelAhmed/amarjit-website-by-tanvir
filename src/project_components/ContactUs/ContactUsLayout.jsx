@@ -23,7 +23,7 @@ function ContactUsLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-64 left-0 scale-170"
+					className="hidden lg:block absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:top-56 2xl:top-52 md:left-0 2xl:left-10  scale-170"
 					alt="bg-image"
 				/>
 				<div className="pt-12 px-4">
