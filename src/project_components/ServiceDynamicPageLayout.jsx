@@ -42,7 +42,7 @@ function ServiceDynamicPageLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-32 left-0 xl:left-[0rem] scale-100 xl:scale-130"
+					className="absolute top-64 left-0 scale-170"
 					alt="bg-image"
 				/>
 

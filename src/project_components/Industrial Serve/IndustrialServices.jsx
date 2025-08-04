@@ -22,7 +22,7 @@ function IndustrialServices() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-52 left-0 xl:left-[0rem] scale-100 xl:scale-150"
+					className="absolute top-64 left-0 scale-170"
 					alt="bg-image"
 				/>
 				<IndustrialSector />

@@ -18,21 +18,21 @@ function AboutUsLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-12 left-0 xl:left-[0rem] scale-100 xl:scale-110"
+					className="absolute top-[16rem] left-40  scale-170"
 					alt="bg-image"
 				/>
 				<Image
 					src={"/right_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-[52rem] right-0 xl:right-[0rem] scale-100 xl:scale-110"
+					className="absolute top-[90rem] right-40 scale-170"
 					alt="bg-image"
 				/>
 				<Image
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute bottom-36 left-0 xl:left-[0rem] scale-100 xl:scale-110 -z-10"
+					className="absolute -bottom-[35rem] left-40 scale-170 -z-10"
 					alt="bg-image"
 				/>
 

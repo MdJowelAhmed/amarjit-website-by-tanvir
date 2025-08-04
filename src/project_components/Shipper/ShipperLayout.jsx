@@ -22,14 +22,14 @@ function ShipperLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-16 left-0 xl:left-[0rem] scale-100 xl:scale-110"
+					className="absolute top-64 left-0 scale-170 "
 					alt="bg-image"
 				/>
 				<Image
 					src={"/right_img.png"}
 					width={500}
 					height={500}
-					className="absolute -bottom-[0rem] right-0 xl:right-[0rem] scale-100 xl:scale-110"
+					className="absolute -bottom-[0rem] right-0 scale-170"
 					alt="bg-image"
 				/>
 				<LogisticsCard />

@@ -51,7 +51,7 @@ function ThreeServiceCard() {
 		<div className="py-12 px-4 sm:px-6 lg:px-8 mb-10">
 			<div className="container mx-auto max-w-7xl">
 				{ourService()}
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-10">
 					{threeServices.map((service) => (
 						<Card
 							key={service.id}
@@ -67,8 +67,8 @@ function ThreeServiceCard() {
 								</p>
 							</CardContent>
 							<CardFooter className="pt-4 pb-6 px-6">
-								<Link href={service.href} className="w-full">
-									<Button className="w-full custom-btn">
+								<Link href={service.href} className="w-full z-10">
+									<Button className="w-full custom-btn z-10">
 										Continue <FaLongArrowAltRight />
 									</Button>
 								</Link>

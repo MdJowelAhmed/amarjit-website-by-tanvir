@@ -97,7 +97,7 @@ function Homepage() {
 						src={"/left_img.png"}
 						width={500}
 						height={500}
-						className="absolute top-[18rem] left-40  lg:scale-170 "
+						className="absolute top-[18rem] left-40  scale-170 "
 						alt="bg-image"
 					/>
 					<Image
@@ -132,7 +132,9 @@ function Homepage() {
 
 				<CoreOfferings />
 				<WhyChooseUs />
-				<GetInTouch />
+				<div className="px-4">
+					<GetInTouch />
+				</div>
 			</div>
 		</div>
 	);

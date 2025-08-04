@@ -18,15 +18,15 @@ function ContactUsLayout() {
 				subheading={setContactUsBanner.subheading}
 			/>
 
-			<div className="pt-12">
-				<div className="relative overflow-hidden">
-					<Image
-						src={"/left_img.png"}
-						width={500}
-						height={500}
-						className="absolute top-12 left-0 xl:left-[0rem] scale-100 xl:scale-110"
-						alt="bg-image"
-					/>
+			<div className="relative overflow-hidden">
+				<Image
+					src={"/left_img.png"}
+					width={500}
+					height={500}
+					className="absolute top-64 left-0 scale-170"
+					alt="bg-image"
+				/>
+				<div className="pt-12 px-4">
 					<GetInTouch />
 				</div>
 			</div>

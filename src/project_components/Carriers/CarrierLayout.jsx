@@ -22,14 +22,14 @@ function CarrierLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-28 left-0 xl:left-[0rem] scale-100 xl:scale-130 -z-10"
+					className="absolute top-64 left-0 scale-170 -z-10"
 					alt="bg-image"
 				/>
 				<Image
 					src={"/right_img.png"}
 					width={500}
 					height={500}
-					className="absolute -bottom-[15rem] right-0 xl:right-[0rem] scale-100 xl:scale-110 -z-10"
+					className="absolute -bottom-[15rem] right-0 scale-170 -z-10"
 					alt="bg-image"
 				/>
 				<CarriersFeature />
