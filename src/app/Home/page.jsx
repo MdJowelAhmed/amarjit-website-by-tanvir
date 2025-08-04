@@ -86,42 +86,46 @@ function Homepage() {
 				heading={setHomeBanner.heading}
 				subheading={setHomeBanner.subheading}
 			/>
-			<div className="relative overflow-hidden">
+			<div
+				// style={{
+				// 	backgroundImage: "url('/left_img.png')",
+				// }}
+				className="relative overflow-hidden">
 				{/* Background Images */}
 				<div className="hidden lg:block">
 					<Image
 						src={"/left_img.png"}
 						width={500}
 						height={500}
-						className="absolute top-52 left-0 xl:left-[7rem] scale-100 xl:scale-150"
+						className="absolute top-[18rem] left-40  lg:scale-170 "
 						alt="bg-image"
 					/>
 					<Image
 						src={"/left_img.png"}
 						width={500}
 						height={500}
-						className="absolute top-[150rem] left-0 xl:left-[7rem] scale-100 xl:scale-150"
+						className="absolute top-[150rem] left-40 scale-170 "
 						alt="bg-image"
 					/>
 					<Image
 						src={"/left_img.png"}
 						width={500}
 						height={500}
-						className="absolute -bottom-[28rem] left-0 xl:left-[7rem] scale-100 xl:scale-130"
+						className="absolute -bottom-[28rem] left-40  scale-170 "
 						alt="bg-image"
 					/>
 					<Image
 						src={"/right_img.png"}
 						width={500}
 						height={500}
-						className="absolute top-[85rem] right-0 xl:right-[7rem] scale-100 xl:scale-150"
+						className="absolute top-[85rem] right-40  scale-170 "
 						alt="bg-image"
 					/>
 					<Image
 						src={"/right_img.png"}
 						width={500}
 						height={500}
-						className="absolute bottom-[33rem] right-0 xl:right-[7rem] scale-100 xl:scale-150"
+						className="absolute bottom-[33rem] right-0  scale-170 "
 						alt="bg-image"
 					/>
 				</div>

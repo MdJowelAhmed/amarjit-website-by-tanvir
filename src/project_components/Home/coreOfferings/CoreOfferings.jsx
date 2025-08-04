@@ -143,8 +143,10 @@ const CoreOfferings = () => {
 					{/* Header Section */}
 					<div className="text-center mb-12 sm:mb-16 lg:mb-20">
 						<div className="flex items-start justify-center gap-4 mb-6">
-							<div>{provideIcon({ name: "core_offering" })}</div>
-							<h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-b from-[#2C2D70] to-[#512C7B] bg-clip-text text-transparent mb-6 sm:mb-8">
+							<div className="pt-2">
+								{provideIcon({ name: "core_offering" })}
+							</div>
+							<h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-b from-[#2C2D70] to-[#512C7B] bg-clip-text text-transparent mb-2 sm:mb-4 leading-20">
 								Our Core Offerings
 							</h2>
 						</div>
