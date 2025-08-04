@@ -138,7 +138,14 @@ const CoreOfferings = () => {
 
 	return (
 		<>
-			<section className="bg-transparent py-16 sm:py-20 lg:pt-24 lg:pb-0  overflow-hidden">
+			<section
+				// style={{
+				// 	backgroundImage: "url('/left_img.png')",
+				// 	backgroundRepeat: "no-repeat",
+				// 	backgroundPosition: "left",
+				// 	backgroundSize: "40% 100%",
+				// }}
+				className="bg-transparent py-16 sm:py-20 lg:pt-24 lg:pb-0  overflow-hidden">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 					{/* Header Section */}
 					<div className="text-center mb-12 sm:mb-16 lg:mb-20">

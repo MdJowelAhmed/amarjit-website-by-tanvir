@@ -24,21 +24,21 @@ function CertificationLayout() {
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-64 left-0 scale-170"
+					className="absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:top-44 2xl:top-52 md:left-0 2xl:left-10 scale-170"
 					alt="bg-image"
 				/>
 				<Image
 					src={"/right_img.png"}
 					width={500}
 					height={500}
-					className="absolute top-[60rem] right-0 scale-170"
+					className="absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:top-[68rem] 2xl:top-[70rem] md:right-0 2xl:right-10 scale-170"
 					alt="bg-image"
 				/>
 				<Image
 					src={"/left_img.png"}
 					width={500}
 					height={500}
-					className="absolute bottom-0 left-0 scale-170"
+					className="absolute h-full md:h-[450px] 2xl:h-[550px] w-full md:w-[420px] 2xl:w-[550px] md:bottom-40 2xl:bottom-14 md:left-0 2xl:left-10 scale-170"
 					alt="bg-image"
 				/>
 				<NAICSTable />
