@@ -27,7 +27,7 @@ const ContractToHireDialog = () => {
             className="h-12 mt-4 gardient-style"
             onClick={() => setOpenForm(true)}
           >
-            Talk to Our HR Team
+            Talk to Our HR Teams
           </Button>
         </div>
 
@@ -75,7 +75,11 @@ const ContractToHireDialog = () => {
         </div>
       </DialogContent>
 
-      {openForm && <SharedForm formTitle={"Talk to HR"} />}
+      <SharedForm 
+        formTitle={"Talk to HR"} 
+        open={openForm}
+        onOpenChange={setOpenForm}
+      />
     </>
   );
 };

@@ -115,7 +115,11 @@ const ManagedServicesDialog = ({ parentOpen }) => {
         </div>
       </DialogContent>
 
-      {openForm && <SharedForm formTitle={formTitle} onClose={handleClose} />}
+      <SharedForm 
+        formTitle={formTitle} 
+        open={openForm}
+        onOpenChange={setOpenForm}
+      />
     </>
   );
 };

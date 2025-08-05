@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
+	Dialog,
 	DialogContent,
 	DialogHeader,
 	DialogTitle,
@@ -17,9 +18,9 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import React from "react";
 
-function SharedForm({ formTitle }) {
+function SharedForm({ formTitle, open, onOpenChange }) {
 	return (
-		<>
+		<Dialog open={open} onOpenChange={onOpenChange}>
 			<DialogContent className="max-w-lg md:max-w-2xl lg:max-w-4xl ">
 				<div className="mt-2 text-center">
 					<h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
@@ -99,7 +100,7 @@ function SharedForm({ formTitle }) {
 					</form>
 				</div>
 			</DialogContent>
-		</>
+		</Dialog>
 	);
 }
 
