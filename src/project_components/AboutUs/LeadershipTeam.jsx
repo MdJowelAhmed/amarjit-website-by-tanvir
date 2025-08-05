@@ -50,7 +50,7 @@ function LeadershipTeam() {
 						<Card
 							key={index}
 							className="group  h-full shadow-none border-none bg-transparent transition-shadow duration-300 p-0">
-							<CardHeader className="p-0">
+							{/* <CardHeader className="p-0">
 								<Image
 									src={member.src}
 									width={400}
@@ -58,7 +58,7 @@ function LeadershipTeam() {
 									alt={member.alt}
 									className="w-full group-hover:scale-105 ease-in duration-300 "
 								/>
-							</CardHeader>
+							</CardHeader> */}
 							<CardContent className="text-center px-4">
 								<h3 className="text-xl md:text-2xl font-semibold text-gradient-heading">
 									{member.name}
