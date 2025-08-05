@@ -27,7 +27,7 @@ const ContractToHireDialog = () => {
             className="h-12 mt-4 gardient-style"
             onClick={() => setOpenForm(true)}
           >
-            Talk to Our HR Teams
+            Talk to Our HR Team
           </Button>
         </div>
 
