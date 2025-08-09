@@ -45,7 +45,7 @@ function NavBar() {
 		},
 		{
 			id: 3,
-			label: "Service",
+			label: "Services",
 			children: [
 				{
 					id: 3.1,

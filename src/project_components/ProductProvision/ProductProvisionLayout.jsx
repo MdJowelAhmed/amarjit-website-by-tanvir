@@ -7,7 +7,7 @@ import Image from "next/image";
 function ProductProvisionLayout() {
 	const setServiceBanner = {
 		src: "/Our Service/our_service.jpg",
-		heading: "Our Service",
+		heading: "Our Services",
 		subheading:
 			"We deliver flexible staffing and reliable product sourcing to help our clients meet operational goals with confidence, compliance, and speed.",
 	};

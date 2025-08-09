@@ -7,7 +7,7 @@ function LeadershipTeam() {
 		{
 			name: "Neeraj Joshi",
 			title: "Chief Executive officer, Chairman",
-			src: "/AboutUs/leader_1.png",
+			src: "/AboutUs/neeraj_joshi.png",
 			alt: "chairman",
 			description:
 				" Neeraj Joshi brings deep expertise in scaling small businesses through strategic execution and operational excellence. Specializes in navigating and expanding government contract opportunities to drive sustainable growth.",
@@ -22,7 +22,7 @@ function LeadershipTeam() {
 		},
 		{
 			name: "Anuradha Bhardwaj",
-			title: "Chief Operating Office",
+			title: "Chief Operating Officer",
 			src: "/AboutUs/anuradha_vardwaj.png",
 			alt: "leader_3",
 			description:
@@ -30,11 +30,11 @@ function LeadershipTeam() {
 		},
 		{
 			name: "Vikram Sharma",
-			title: "Chief Client Office",
-			src: "/AboutUs/leader_4.png",
+			title: "Chief Client Officer",
+			src: "/AboutUs/vikram_sharma.png",
 			alt: "leader_4",
 			description:
-				"Vikram leading client engagement and strategic growth initiatives. With deep experience in public sector solutions, he ensures government partners receive tailored, compliant, and impactful services that drive long-term value.",
+				"Vikram leads client engagement and strategic growth initiatives. With deep experience in public sector solutions, he ensures government partners receive tailored, compliant, and impactful services that drive long-term value.",
 		},
 	];
 
@@ -50,20 +50,20 @@ function LeadershipTeam() {
 						<Card
 							key={index}
 							className="group  h-full shadow-none border-none bg-transparent transition-shadow duration-300 p-0">
-							{/* <CardHeader className="p-0">
+							<CardHeader className="p-0">
 								<Image
 									src={member.src}
 									width={400}
 									height={400}
 									alt={member.alt}
-									className="w-full group-hover:scale-105 ease-in duration-300 "
+									className="w-full h-[22.5rem] rounded-lg group-hover:scale-105 ease-in duration-300 "
 								/>
-							</CardHeader> */}
+							</CardHeader>
 							<CardContent className="text-center px-4">
 								<h3 className="text-xl md:text-2xl font-semibold text-gradient-heading">
 									{member.name}
 								</h3>
-								<p className="text-sm font-semibold text-gray-700">
+								<p className="text-sm font-semibold text-gray-700 mt-1">
 									{member.title}
 								</p>
 								<p className="text-gray-700 pt-5">{member.description}</p>

@@ -32,7 +32,7 @@ export function Footer() {
 										<Link
 											href="/product-provisioning-services"
 											className="hover:text-white/70 transition-colors">
-											Service
+											Services
 										</Link>
 									</li>
 									<li>
