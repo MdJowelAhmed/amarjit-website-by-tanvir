@@ -50,6 +50,9 @@ const DirectHireDialog = ({ parentOpen }) => {
   return (
     <>
       <DialogContent className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl p-4 sm:p-6 lg:p-8">
+        <DialogHeader>
+          <DialogTitle>Direct Hire</DialogTitle>
+        </DialogHeader>
         <div className="text-center">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
             Direct Hire
@@ -109,8 +112,8 @@ const DirectHireDialog = ({ parentOpen }) => {
         </div>
       </DialogContent>
 
-      <SharedForm 
-        formTitle={formTitle} 
+      <SharedForm
+        formTitle={formTitle}
         open={openForm}
         onOpenChange={setOpenForm}
       />

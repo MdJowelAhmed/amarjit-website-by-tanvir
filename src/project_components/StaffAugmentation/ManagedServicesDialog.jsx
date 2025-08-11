@@ -50,6 +50,9 @@ const ManagedServicesDialog = ({ parentOpen }) => {
   return (
     <>
       <DialogContent className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl  p-4 sm:p-6 lg:p-8">
+        <DialogHeader>
+          <DialogTitle>Managed Services & Project Staffing</DialogTitle>
+        </DialogHeader>
         <div className="text-center">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
             Scalable Managed Services & Project-Based Staffing
@@ -115,8 +118,8 @@ const ManagedServicesDialog = ({ parentOpen }) => {
         </div>
       </DialogContent>
 
-      <SharedForm 
-        formTitle={formTitle} 
+      <SharedForm
+        formTitle={formTitle}
         open={openForm}
         onOpenChange={setOpenForm}
       />

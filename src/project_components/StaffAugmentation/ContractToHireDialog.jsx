@@ -15,6 +15,9 @@ const ContractToHireDialog = () => {
   return (
     <>
       <DialogContent className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl  p-4 sm:p-6 lg:p-8">
+        <DialogHeader>
+          <DialogTitle>Contract-to-Hire</DialogTitle>
+        </DialogHeader>
         <div className="text-center">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold md:font-bold">
             Contract-to-Hire
@@ -75,8 +78,8 @@ const ContractToHireDialog = () => {
         </div>
       </DialogContent>
 
-      <SharedForm 
-        formTitle={"Talk to HR"} 
+      <SharedForm
+        formTitle={"Talk to HR"}
         open={openForm}
         onOpenChange={setOpenForm}
       />
