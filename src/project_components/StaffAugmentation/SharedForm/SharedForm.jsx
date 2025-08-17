@@ -175,11 +175,15 @@ function SharedForm({ formTitle, open, onOpenChange }) {
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="extra-services">
-                        Extra Services
+                      <SelectItem value="staff-augmentation-services">
+                        Staff Augmentation Services
                       </SelectItem>
-                      <SelectItem value="protection">Protection</SelectItem>
-                      <SelectItem value="consulting">Consulting</SelectItem>
+                      <SelectItem value="product-provisioning-services">
+                        Product Provisioning Services
+                      </SelectItem>
+                      <SelectItem value="logistics-services">
+                        Logistics Services
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 )}
