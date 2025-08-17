@@ -2,11 +2,11 @@ import LogisticsServiceLayout from "@/project_components/LogisticsServices/Logis
 import React from "react";
 
 function page() {
-	return (
-		<>
-			<LogisticsServiceLayout />
-		</>
-	);
+  return (
+    <>
+      <LogisticsServiceLayout />
+    </>
+  );
 }
 
 export default page;

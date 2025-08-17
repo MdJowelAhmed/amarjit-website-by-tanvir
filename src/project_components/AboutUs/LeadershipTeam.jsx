@@ -6,7 +6,7 @@ function LeadershipTeam() {
   const teamMembers = [
     {
       name: "Vikram Sharma",
-      title: "Chief Executive officer, Chairman",
+      title: "Chief Executive officer",
       src: "/AboutUs/vikram_sharma.png",
       alt: "chairman",
       description:
@@ -30,7 +30,7 @@ function LeadershipTeam() {
     },
     {
       name: "Neeraj Joshi",
-      title: "Chief Client Officer",
+      title: "Chief Client Officer, Chairman",
       src: "/AboutUs/neeraj_joshi.png",
       alt: "leader_4",
       description:
