@@ -9,8 +9,13 @@ import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import SharedForm from "./SharedForm/SharedForm";
 
-const ContractToHireDialog = () => {
+const ContractToHireDialog = ({ onClose }) => {
   const [openForm, setOpenForm] = useState(false);
+
+  // Handle form close and cleanup
+  const handleFormClose = () => {
+    setOpenForm(false);
+  };
 
   return (
     <>
@@ -81,7 +86,7 @@ const ContractToHireDialog = () => {
       <SharedForm
         formTitle={"Talk to HR"}
         open={openForm}
-        onOpenChange={setOpenForm}
+        onOpenChange={handleFormClose}
       />
     </>
   );

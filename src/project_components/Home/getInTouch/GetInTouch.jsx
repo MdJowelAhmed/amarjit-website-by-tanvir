@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Mail, MapPin, Linkedin, Send } from "lucide-react";
+import React from "react";
+import { Mail, MapPin } from "lucide-react";
 import { CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,39 +15,32 @@ import { Button } from "@/components/ui/button";
 import { FaArrowRight } from "react-icons/fa6";
 import { LiaPhoneVolumeSolid } from "react-icons/lia";
 import { toast } from "sonner";
+import { useForm, Controller } from "react-hook-form";
 
 function GetInTouch() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    service: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+      phone: "",
+      email: "",
+      service: "",
+      message: "",
+    },
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSelectChange = (value) => {
-    setFormData((prev) => ({
-      ...prev,
-      service: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
+  const onSubmit = (data) => {
+    console.log("Form submitted with validated data:", data);
     toast.success("Form submitted successfully", {
       description: "Thank you for contacting us!",
       position: "top-right",
     });
-    // Handle form submission here
+    reset(); // Reset form after successful submission
   };
 
   const contactInfo = [
@@ -113,7 +106,7 @@ function GetInTouch() {
         </div>
 
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           className="space-y-3 sm:space-y-4 md:space-y-6"
         >
           {/* Name and Phone */}
@@ -121,24 +114,44 @@ function GetInTouch() {
             <div className="space-y-1 sm:space-y-2">
               <Input
                 type="text"
-                name="name"
                 placeholder="Your Name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="h-10 sm:h-12 text-black border-[#302d70] focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-500"
-                required
+                className={`h-10 sm:h-12 text-black border-[#302d70] focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-500 ${
+                  errors.name ? "border-red-500" : ""
+                }`}
+                {...register("name", {
+                  required: "Name is required",
+                  minLength: {
+                    value: 2,
+                    message: "Name must be at least 2 characters",
+                  },
+                })}
               />
+              {errors.name && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
             <div className="space-y-1 sm:space-y-2">
               <Input
                 type="tel"
-                name="phone"
                 placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className="h-10 sm:h-12 text-black border-[#302d70]  focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-500"
-                required
+                className={`h-10 sm:h-12 text-black border-[#302d70] focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-500 ${
+                  errors.phone ? "border-red-500" : ""
+                }`}
+                {...register("phone", {
+                  required: "Phone number is required",
+                  pattern: {
+                    value: /^[0-9+-\s()]{10,15}$/,
+                    message: "Please enter a valid phone number",
+                  },
+                })}
               />
+              {errors.phone && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.phone.message}
+                </p>
+              )}
             </div>
           </div>
 
@@ -147,48 +160,81 @@ function GetInTouch() {
             <div className="space-y-1 sm:space-y-2">
               <Input
                 type="email"
-                name="email"
                 placeholder="Your Email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="h-10 sm:h-12 text-black border-[#302d70] focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-500"
-                required
+                className={`h-10 sm:h-12 text-black border-[#302d70] focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-500 ${
+                  errors.email ? "border-red-500" : ""
+                }`}
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Please enter a valid email address",
+                  },
+                })}
               />
+              {errors.email && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
             <div className="space-y-1 sm:space-y-2">
-              <Select
-                value={formData.service}
-                onValueChange={handleSelectChange}
-              >
-                <SelectTrigger className="h-10 w-full sm:h-12  border-[#302d70] focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-500">
-                  <SelectValue placeholder="Service Interest" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="web-development">
-                    Web Development
-                  </SelectItem>
-                  <SelectItem value="mobile-app">
-                    Mobile App Development
-                  </SelectItem>
-                  <SelectItem value="ui-ux-design">UI/UX Design</SelectItem>
-                  <SelectItem value="consulting">Consulting</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
+              <Controller
+                name="service"
+                control={control}
+                rules={{ required: "Please select a service" }}
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger
+                      className={`h-10 w-full sm:h-12 border-[#302d70] focus:ring-2 focus:border-gray-400 focus:ring-gray-400 data-[state=open]:ring-2 placeholder:text-gray-500 ${
+                        errors.service ? "border-red-500" : ""
+                      }`}
+                    >
+                      <SelectValue placeholder="Service Interest" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="staff-augmentation-servies">
+                        Staff Augmentation Services
+                      </SelectItem>
+                      <SelectItem value="product-provisioning-services">
+                        Product Provisioning Services
+                      </SelectItem>
+                      <SelectItem value="logistics-services">
+                        Logistics Services
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              {errors.service && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.service.message}
+                </p>
+              )}
             </div>
           </div>
 
           {/* Message */}
           <div className="space-y-1 sm:space-y-2">
             <Textarea
-              name="message"
               placeholder="Your Message"
-              value={formData.message}
-              onChange={handleInputChange}
               rows={4}
-              className="text-black border-[#302d70] focus:border-blue-500 focus:ring-blue-500 resize-none h-24 sm:h-32 placeholder:text-gray-500"
-              required
+              className={`text-black border-[#302d70] focus:border-blue-500 focus:ring-blue-500 resize-none h-24 sm:h-32 placeholder:text-gray-500 ${
+                errors.message ? "border-red-500" : ""
+              }`}
+              {...register("message", {
+                required: "Message is required",
+                minLength: {
+                  value: 10,
+                  message: "Message must be at least 10 characters",
+                },
+              })}
             />
+            {errors.message && (
+              <p className="text-red-500 text-xs mt-1">
+                {errors.message.message}
+              </p>
+            )}
           </div>
 
           {/* Submit Button */}

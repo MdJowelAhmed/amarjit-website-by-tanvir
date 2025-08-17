@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,17 +12,45 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
+import { useForm, Controller } from "react-hook-form";
 
 function TransportInfoQuote() {
-  const [formData, setFormData] = useState({
-    transportFrom: "",
-    transportTo: "",
-    vehicleType: "",
-    othersVehicleType: "",
-    name: "",
-    phone: "",
-    email: "",
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+    clearErrors,
+    watch,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      transportFrom: "",
+      transportTo: "",
+      vehicleType: "",
+      othersVehicleType: "",
+      name: "",
+      phone: "",
+      email: "",
+    },
+    mode: "onSubmit", // Only validate on form submission
   });
+
+  // Watch the vehicleType field to conditionally show the "Others" input
+  const watchVehicleType = watch("vehicleType");
+
+  // Add conditional validation for othersVehicleType
+  React.useEffect(() => {
+    // If vehicle type is "others", make othersVehicleType required
+    if (watchVehicleType === "others") {
+      register("othersVehicleType", {
+        required: "Please specify the vehicle type",
+      });
+    } else {
+      // Clear any errors when not showing the field
+      clearErrors("othersVehicleType");
+    }
+  }, [watchVehicleType, register, clearErrors]);
 
   const vehicleType = [
     {
@@ -59,8 +87,8 @@ function TransportInfoQuote() {
     },
   ];
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
+  const onSubmit = (data) => {
+    console.log("Form submitted with validated data:", data);
 
     // Show success toast
     toast.success("Quote Request Submitted!", {
@@ -69,22 +97,7 @@ function TransportInfoQuote() {
     });
 
     // Reset form
-    setFormData({
-      transportFrom: "",
-      transportTo: "",
-      vehicleType: "",
-      othersVehicleType: "",
-      name: "",
-      phone: "",
-      email: "",
-    });
-  };
-
-  const handleInputChange = (field, value) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
+    reset();
   };
 
   return (
@@ -148,7 +161,7 @@ function TransportInfoQuote() {
               </p>
             </CardHeader>
             <CardContent className="space-y-5">
-              <div className="space-y-5">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 {/* Transport From and To */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -161,12 +174,22 @@ function TransportInfoQuote() {
                     <Input
                       id="transportFrom"
                       placeholder="Zip Code"
-                      className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
-                      value={formData.transportFrom}
-                      onChange={(e) =>
-                        handleInputChange("transportFrom", e.target.value)
-                      }
+                      className={`bg-white border-gray-300 placeholder:text-gray-400 h-12 ${
+                        errors.transportFrom ? "border-red-500" : ""
+                      }`}
+                      {...register("transportFrom", {
+                        required: "Origin location is required",
+                        pattern: {
+                          value: /^[0-9]{5}(-[0-9]{4})?$/,
+                          message: "Please enter a valid ZIP code",
+                        },
+                      })}
                     />
+                    {errors.transportFrom && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.transportFrom.message}
+                      </p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label
@@ -178,12 +201,18 @@ function TransportInfoQuote() {
                     <Input
                       id="transportTo"
                       placeholder="City or Zip Code"
-                      className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
-                      value={formData.transportTo}
-                      onChange={(e) =>
-                        handleInputChange("transportTo", e.target.value)
-                      }
+                      className={`bg-white border-gray-300 placeholder:text-gray-400 h-12 ${
+                        errors.transportTo ? "border-red-500" : ""
+                      }`}
+                      {...register("transportTo", {
+                        required: "Destination is required",
+                      })}
                     />
+                    {errors.transportTo && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.transportTo.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -195,27 +224,44 @@ function TransportInfoQuote() {
                   >
                     Vehicle Type:
                   </Label>
-                  <Select
-                    value={formData.vehicleType}
-                    onValueChange={(value) =>
-                      handleInputChange("vehicleType", value)
-                    }
-                  >
-                    <SelectTrigger className="bg-white border-gray-300 w-full">
-                      <SelectValue placeholder="Select vehicle type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {vehicleType.map((vehicle) => (
-                        <SelectItem key={vehicle.value} value={vehicle.value}>
-                          {vehicle.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <Controller
+                    name="vehicleType"
+                    control={control}
+                    rules={{ required: "Please select a vehicle type" }}
+                    render={({ field }) => (
+                      <Select
+                        onValueChange={field.onChange}
+                        value={field.value}
+                      >
+                        <SelectTrigger
+                          className={`bg-white border-gray-300 w-full ${
+                            errors.vehicleType ? "border-red-500" : ""
+                          }`}
+                        >
+                          <SelectValue placeholder="Select vehicle type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {vehicleType.map((vehicle) => (
+                            <SelectItem
+                              key={vehicle.value}
+                              value={vehicle.value}
+                            >
+                              {vehicle.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                  {errors.vehicleType && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.vehicleType.message}
+                    </p>
+                  )}
                 </div>
 
                 {/* Others Vehicle Type Input - Conditional */}
-                {formData.vehicleType === "others" && (
+                {watchVehicleType === "others" && (
                   <div className="space-y-2">
                     <Label
                       htmlFor="othersVehicleType"
@@ -226,12 +272,18 @@ function TransportInfoQuote() {
                     <Input
                       id="othersVehicleType"
                       placeholder="Please specify vehicle type"
-                      className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
-                      value={formData.othersVehicleType}
-                      onChange={(e) =>
-                        handleInputChange("othersVehicleType", e.target.value)
-                      }
+                      className={`bg-white border-gray-300 placeholder:text-gray-400 h-12 ${
+                        errors.othersVehicleType ? "border-red-500" : ""
+                      }`}
+                      {...register("othersVehicleType", {
+                        required: "Please specify the vehicle type",
+                      })}
                     />
+                    {errors.othersVehicleType && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.othersVehicleType.message}
+                      </p>
+                    )}
                   </div>
                 )}
 
@@ -244,12 +296,22 @@ function TransportInfoQuote() {
                     <Input
                       id="name"
                       placeholder="Name"
-                      className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
-                      value={formData.name}
-                      onChange={(e) =>
-                        handleInputChange("name", e.target.value)
-                      }
+                      className={`bg-white border-gray-300 placeholder:text-gray-400 h-12 ${
+                        errors.name ? "border-red-500" : ""
+                      }`}
+                      {...register("name", {
+                        required: "Name is required",
+                        minLength: {
+                          value: 2,
+                          message: "Name must be at least 2 characters",
+                        },
+                      })}
                     />
+                    {errors.name && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.name.message}
+                      </p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label
@@ -261,12 +323,22 @@ function TransportInfoQuote() {
                     <Input
                       id="phone"
                       placeholder="+3540 5656"
-                      className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
-                      value={formData.phone}
-                      onChange={(e) =>
-                        handleInputChange("phone", e.target.value)
-                      }
+                      className={`bg-white border-gray-300 placeholder:text-gray-400 h-12 ${
+                        errors.phone ? "border-red-500" : ""
+                      }`}
+                      {...register("phone", {
+                        required: "Phone number is required",
+                        pattern: {
+                          value: /^[0-9+-\s()]{10,15}$/,
+                          message: "Please enter a valid phone number",
+                        },
+                      })}
                     />
+                    {errors.phone && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.phone.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -278,23 +350,35 @@ function TransportInfoQuote() {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="example.com"
-                    className="bg-white border-gray-300 placeholder:text-gray-400 h-12"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
+                    placeholder="example@domain.com"
+                    className={`bg-white border-gray-300 placeholder:text-gray-400 h-12 ${
+                      errors.email ? "border-red-500" : ""
+                    }`}
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Please enter a valid email address",
+                      },
+                    })}
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
                 {/* Submit Button */}
                 <div className="pt-4">
                   <Button
-                    onClick={handleSubmit}
+                    type="submit"
                     className="w-full custom-btn hover:opacity-90 text-white font-semibold py-3 h-12"
                   >
                     Get A Quote
                   </Button>
                 </div>
-              </div>
+              </form>
             </CardContent>
           </Card>
         </div>

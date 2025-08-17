@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import SharedForm from "./SharedForm/SharedForm";
 
-const DirectHireDialog = ({ parentOpen }) => {
+const DirectHireDialog = ({ parentOpen, onClose }) => {
   const [openForm, setOpenForm] = useState(false);
   const [formTitle, setFormTitle] = useState("");
 

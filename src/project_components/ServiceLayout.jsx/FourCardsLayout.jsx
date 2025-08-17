@@ -36,10 +36,41 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
+import { useForm, Controller } from "react-hook-form";
+
 function FourCardsLayout({ isGCA }) {
   // const isVendor = path === "/vendor-sourcing";
   const [dialogOpen, setDialogOpen] = React.useState(false);
   const path = usePathname();
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+    clearErrors,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      organization: "",
+      service: "",
+      message: "",
+      terms: false,
+    },
+    mode: "onSubmit", // Only validate on form submission
+  });
+
+  // Handle dialog open/close to reset form
+  React.useEffect(() => {
+    if (!dialogOpen) {
+      // Reset form when dialog closes
+      reset();
+      clearErrors();
+    }
+  }, [dialogOpen, reset, clearErrors]);
 
   const isVendor = path === "/product-provisioning-services/vendor-sourcing";
   const cardDataGCA = [
@@ -147,11 +178,13 @@ function FourCardsLayout({ isGCA }) {
   const cardData = isGCA ? cardDataGCA : cardVendor;
   console.log("isC", isGCA);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
+    console.log("Form submitted with validated data:", data);
     toast.success("Form submitted successfully", {
       position: "top-right",
     });
+    reset(); // Reset form after successful submission
+    setDialogOpen(false); // Close dialog after submission
   };
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-20 py-8">
@@ -251,14 +284,28 @@ function FourCardsLayout({ isGCA }) {
               <DialogTitle>Contact Form</DialogTitle>
             </DialogHeader>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name</Label>
                 <Input
                   id="name"
                   placeholder="Your full name here"
-                  className="border border-blue-950 placeholder:text-gray-400"
+                  className={`border border-blue-950 placeholder:text-gray-400 ${
+                    errors.name ? "border-red-500" : ""
+                  }`}
+                  {...register("name", {
+                    required: "Name is required",
+                    minLength: {
+                      value: 2,
+                      message: "Name must be at least 2 characters",
+                    },
+                  })}
                 />
+                {errors.name && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -267,8 +314,22 @@ function FourCardsLayout({ isGCA }) {
                   id="email"
                   type="email"
                   placeholder="your@email.com"
-                  className="border border-blue-950 placeholder:text-gray-400"
+                  className={`border border-blue-950 placeholder:text-gray-400 ${
+                    errors.email ? "border-red-500" : ""
+                  }`}
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Please enter a valid email address",
+                    },
+                  })}
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -277,8 +338,22 @@ function FourCardsLayout({ isGCA }) {
                   id="phone"
                   type="tel"
                   placeholder="+1234567890"
-                  className="border border-blue-950 placeholder:text-gray-400"
+                  className={`border border-blue-950 placeholder:text-gray-400 ${
+                    errors.phone ? "border-red-500" : ""
+                  }`}
+                  {...register("phone", {
+                    required: "Phone number is required",
+                    pattern: {
+                      value: /^[0-9+-\s()]{10,15}$/,
+                      message: "Please enter a valid phone number",
+                    },
+                  })}
                 />
+                {errors.phone && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.phone.message}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -286,24 +361,53 @@ function FourCardsLayout({ isGCA }) {
                 <Input
                   id="organization"
                   placeholder="Name of your organization"
-                  className="border border-blue-950 placeholder:text-gray-400"
+                  className={`border border-blue-950 placeholder:text-gray-400 ${
+                    errors.organization ? "border-red-500" : ""
+                  }`}
+                  {...register("organization", {
+                    required: "Organization name is required",
+                  })}
                 />
+                {errors.organization && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.organization.message}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="service">Service Type</Label>
-                <Select id="service">
-                  <SelectTrigger className="w-full border border-blue-950 ">
-                    <SelectValue placeholder="Select a service" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="extra-services">
-                      Extra Services
-                    </SelectItem>
-                    <SelectItem value="protection">Protection</SelectItem>
-                    <SelectItem value="consulting">Consulting</SelectItem>
-                  </SelectContent>
-                </Select>
+                <Controller
+                  name="service"
+                  control={control}
+                  rules={{ required: "Please select a service" }}
+                  render={({ field }) => (
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <SelectTrigger
+                        className={`w-full border border-blue-950 ${
+                          errors.service ? "border-red-500" : ""
+                        }`}
+                      >
+                        <SelectValue placeholder="Select a service" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="extra-services">
+                          Extra Services
+                        </SelectItem>
+                        <SelectItem value="protection">Protection</SelectItem>
+                        <SelectItem value="consulting">Consulting</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  )}
+                />
+                {errors.service && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.service.message}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -312,12 +416,37 @@ function FourCardsLayout({ isGCA }) {
                   id="message"
                   placeholder="Tell us about your staffing needs..."
                   rows={4}
-                  className="border border-blue-950 placeholder:text-gray-400"
+                  className={`border border-blue-950 placeholder:text-gray-400 ${
+                    errors.message ? "border-red-500" : ""
+                  }`}
+                  {...register("message", {
+                    required: "Message is required",
+                    minLength: {
+                      value: 10,
+                      message: "Message must be at least 10 characters",
+                    },
+                  })}
                 />
+                {errors.message && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
               <div className="flex items-start space-x-2">
-                <Checkbox id="terms" className="border border-blue-950" />
+                <Controller
+                  name="terms"
+                  control={control}
+                  render={({ field }) => (
+                    <Checkbox
+                      id="terms"
+                      className="border border-blue-950"
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  )}
+                />
                 <Label htmlFor="terms">
                   I'd like to receive a capabilities statement.
                 </Label>
@@ -325,7 +454,6 @@ function FourCardsLayout({ isGCA }) {
 
               <Button
                 type="submit"
-                onClick={handleSubmit}
                 className="w-full custom-btn hover:opacity-90"
               >
                 Send Message

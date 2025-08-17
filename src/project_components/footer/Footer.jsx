@@ -1,9 +1,32 @@
+"use client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import provideIcon from "@/IconProvider/IconProvider";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import React from "react";
 
 export function Footer() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      email: "",
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log("Newsletter subscription:", data);
+    toast.success("Thanks for subscribing!", {
+      description: "You've been added to our newsletter list.",
+      position: "bottom-right",
+    });
+    reset();
+  };
   return (
     <div className="gardient-style text-white dark:text-gray-300 ">
       <div className=" mx-auto px-4 py-6">
@@ -122,16 +145,35 @@ export function Footer() {
             </div>
 
             <div className="flex flex-col space-y-2 max-w-full">
-              <div className="footer-newsletter-gradient p-4 max-w-[20rem] rounded-full flex justify-between">
-                <Input
-                  type="email"
-                  placeholder="Your email"
-                  className="border-none focus:border-none shadow-none h-9 text-black max-w-64 placeholder:text-blue-950"
-                />
-                <Button className="gardient-style max-w-20 rounded-full">
-                  Sign Up
-                </Button>
-              </div>
+              <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+                <div className="footer-newsletter-gradient p-4 max-w-[20rem] rounded-full flex justify-between relative">
+                  <Input
+                    type="email"
+                    placeholder="Your email"
+                    className={`border-none focus:border-none shadow-none h-9 text-black max-w-64 placeholder:text-blue-950 ${
+                      errors.email ? "border-red-500 bg-red-50" : ""
+                    }`}
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Please enter a valid email address",
+                      },
+                    })}
+                  />
+                  <Button
+                    type="submit"
+                    className="gardient-style max-w-20 rounded-full"
+                  >
+                    Sign Up
+                  </Button>
+                </div>
+                {errors.email && (
+                  <p className="text-yellow-300 text-xs mt-1 ml-4">
+                    {errors.email.message}
+                  </p>
+                )}
+              </form>
             </div>
           </div>
         </div>
