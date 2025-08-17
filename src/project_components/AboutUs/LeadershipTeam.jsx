@@ -39,7 +39,7 @@ function LeadershipTeam() {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 bg-transparent mb-10">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 bg-transparent mb-10 z-10">
       <div className="max-w-[85%] mx-auto ">
         <h2 className="text-gradient-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12">
           Leadership Team
@@ -49,7 +49,7 @@ function LeadershipTeam() {
           {teamMembers.map((member, index) => (
             <Card
               key={index}
-              className="group  h-full shadow-none border-none bg-transparent transition-shadow duration-300 p-0"
+              className="group  h-full shadow-none border-none bg-transparent transition-shadow duration-300 p-0 z-10"
             >
               <CardHeader className="p-0">
                 <Image
