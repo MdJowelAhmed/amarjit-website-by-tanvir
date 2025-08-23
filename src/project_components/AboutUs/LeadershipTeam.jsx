@@ -6,7 +6,7 @@ function LeadershipTeam() {
   const teamMembers = [
     {
       name: "Vikram Sharma",
-      title: "Chief Executive officer",
+      title: "Chief Executive Officer",
       src: "/AboutUs/vikram_sharma.png",
       alt: "chairman",
       description:

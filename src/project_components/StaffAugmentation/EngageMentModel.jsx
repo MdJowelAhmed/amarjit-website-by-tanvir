@@ -36,7 +36,7 @@ function EngageMentModel() {
   const engagementModel = [
     {
       id: 1,
-      heading: "Contact",
+      heading: "Contract",
       content:
         "Deploy highly skilled professionals for short- or long-term assignments ideal for surge needs, special projects, or temporary vacancies.",
     },
@@ -56,7 +56,7 @@ function EngageMentModel() {
       id: 4,
       heading: "Managed Services & Project Staffing",
       content:
-        "Tap into our national talent network to fill key permanent roles with pre-vetted candidates — quickly and confidently.",
+        "Leverage dedicated teams embedded within your operations to manage projects end-to-end, maintaining performance and quality.",
     },
   ];
 
