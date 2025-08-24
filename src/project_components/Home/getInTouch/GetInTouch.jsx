@@ -54,7 +54,7 @@ function GetInTouch() {
       id: 2,
       icon: <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#4f3075]" />,
       label: "E-mail",
-      content: "info@afbusa.com",
+      content: "info@kfbusa.com",
     },
 
     {

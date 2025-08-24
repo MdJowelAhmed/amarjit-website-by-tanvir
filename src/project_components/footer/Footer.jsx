@@ -8,6 +8,14 @@ import { toast } from "sonner";
 import React from "react";
 
 export function Footer() {
+  const [currentYear, setCurrentYear] = React.useState("");
+
+  // Set the current year once when component mounts
+  React.useEffect(() => {
+    setCurrentYear(new Date().getFullYear().toString());
+    // No cleanup needed for this simple state setting
+  }, []); // Empty dependency array means this runs once on mount
+
   const {
     register,
     handleSubmit,
@@ -123,7 +131,7 @@ export function Footer() {
               </p>
               <p className="leading-6 font-light text-xs">
                 E-mail: <br />
-                <span className="font-bold text-base">info@afbusa.com</span>
+                <span className="font-bold text-base">info@kfbusa.com</span>
               </p>
 
               <p className="leading-6 font-light text-xs">
@@ -181,7 +189,7 @@ export function Footer() {
         {/* Bottom section */}
         <div className="border-t  border-gray-200 dark:border-gray-700 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm">
-            © {new Date().getFullYear()} afbusa.com. All rights reserved.
+            © {currentYear} kfbusa.com. All rights reserved.
           </p>
           {/* <div className="flex gap-4">
 						<Link
