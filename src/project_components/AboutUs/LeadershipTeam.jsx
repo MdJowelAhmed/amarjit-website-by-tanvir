@@ -15,8 +15,8 @@ function LeadershipTeam() {
     {
       name: "Amarjit Kaur",
       title: "Chief Finance Officer",
-      src: "/AboutUs/leader_2.png",
-      alt: "leader_2",
+      src: "",
+      alt: "Amarjit Kaur",
       description:
         "Amarjit brings strategic and hands-on experience specializing in small business growth, financial planning, and cash flow management. Skilled in streamlining operations, guiding strategic decisions, and building strong financial foundations for long-term success.",
     },
@@ -57,7 +57,7 @@ function LeadershipTeam() {
                   width={400}
                   height={400}
                   alt={member.alt}
-                  className="w-full h-[20rem] md:h-[19rem] lg:h-[15rem] 2xl:h-[21rem] rounded-lg group-hover:scale-105 ease-in duration-300 "
+                  className="bg-white w-full h-[20rem] md:h-[19rem] lg:h-[15rem] 2xl:h-[21rem] rounded-lg group-hover:scale-105 ease-in duration-300 "
                 />
               </CardHeader>
               <CardContent className="text-center px-4">

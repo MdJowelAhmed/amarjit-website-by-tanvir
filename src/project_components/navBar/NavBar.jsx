@@ -132,7 +132,7 @@ function NavBar() {
                       {nav.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[300px]">
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[550px]">
                         {nav.children.map((child) => (
                           <li key={child.id}>
                             <NavigationMenuLink asChild>
