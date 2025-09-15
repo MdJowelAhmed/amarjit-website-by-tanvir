@@ -15,7 +15,7 @@ function LeadershipTeam() {
     {
       name: "Amarjit Kaur",
       title: "Chief Finance Officer",
-      src: "",
+      src: "/AboutUs/leader3.jpg",
       alt: "Amarjit Kaur",
       description:
         "Amarjit brings strategic and hands-on experience specializing in small business growth, financial planning, and cash flow management. Skilled in streamlining operations, guiding strategic decisions, and building strong financial foundations for long-term success.",
